@@ -15,11 +15,20 @@ namespace SA
         [HideInInspector] public float delta;
         [HideInInspector] public Transform mTransform;
         [HideInInspector] public Rigidbody Rigidbody;
+        [HideInInspector] public Animator Animator;
+
+        public AnimHashes Hashes;
+        public AnimatorData AnimData;
+
+        public bool CanMoveForward { get; set; }
 
         private void Start()
         {
             mTransform = transform;
             Rigidbody = GetComponent<Rigidbody>();
+            Animator = GetComponentInChildren<Animator>();
+            Hashes = new AnimHashes();
+            AnimData = new AnimatorData(Animator);
         }
 
         private void FixedUpdate()

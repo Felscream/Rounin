@@ -3,13 +3,40 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 711dbd0dcc0707448ad710a82f0aa6b6, type: 3}
   m_Name: Graph
   m_EditorClassIdentifier: 
-  windows: []
-  idCount: 0
+  windows:
+  - id: 0
+    drawNode: {fileID: 11400000, guid: 3de6cb72c5d54a842957b3d8754294e2, type: 2}
+    windowRect:
+      serializedVersion: 2
+      x: 239
+      y: 84
+      width: 200
+      height: 330
+    windowTitle: State
+    enterNode: 0
+    targetNode: 0
+    isDuplicate: 0
+    comment: 
+    isAssigned: 1
+    showDescription: 0
+    isOnCurrent: 0
+    collapse: 0
+    showActions: 1
+    showEnterExit: 0
+    previousCollapse: 0
+    stateRef:
+      currentState: {fileID: 11400000, guid: 721621ced8afc0940a77ff3d1ffaf8ea, type: 2}
+      previousState: {fileID: 11400000, guid: 721621ced8afc0940a77ff3d1ffaf8ea, type: 2}
+    transRef:
+      previousCondition: {fileID: 0}
+      transitionId: 0
+  idCount: 1
