@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using SO;
 namespace SA
 {
 	[CreateAssetMenu(menuName = "Inputs/Button")]
@@ -11,8 +11,7 @@ namespace SA
 		public bool isPressed;
 		public KeyState keyState;
 		public bool updateBoolVar = true;
-		//You need to import the SO library from my github to use a BoolVariable asset
-	//	public SO.BoolVariable targetBoolVariable;
+    	public SO.BoolVariable targetBoolVariable;
 
 
 		public override void Execute()
@@ -34,10 +33,10 @@ namespace SA
 
 			if (updateBoolVar)
 			{
-				//if (targetBoolVariable != null)
-				//{
-				//	targetBoolVariable.value = isPressed;
-				//}
+				if (targetBoolVariable != null)
+				{
+					targetBoolVariable.value = isPressed;
+				}
 			}
 		}
 

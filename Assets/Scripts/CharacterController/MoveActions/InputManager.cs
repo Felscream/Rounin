@@ -11,19 +11,19 @@ namespace SA
         public FloatVariable Horizontal;
         public FloatVariable Vertical;
 
-        public StateManagerVariables PlayerSates;
+        public StateManagerVariables PlayerStates;
         public ActionBatch InputUpdateBatch;
 
         public override void Execute()
         {
             InputUpdateBatch.Execute();
 
-            if(PlayerSates.Value != null)
+            if(PlayerStates != null && PlayerStates.Value != null)
             {
-                PlayerSates.Value.MovementVariables.Horizontal = Horizontal.value;
-                PlayerSates.Value.MovementVariables.Vertical = Vertical.value;
+                PlayerStates.Value.MovementVariables.Horizontal = Horizontal.value;
+                PlayerStates.Value.MovementVariables.Vertical = Vertical.value;
 
-                PlayerSates.Value.MovementVariables.MoveAmount = Mathf.Clamp01(Mathf.Abs(Horizontal.value) + Mathf.Abs(Vertical.value));
+                PlayerStates.Value.MovementVariables.MoveAmount = Mathf.Clamp01(Mathf.Abs(Horizontal.value) + Mathf.Abs(Vertical.value));
             }
         }
     }

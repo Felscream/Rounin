@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Horizontal: {fileID: 11400000, guid: c4929ba98125f524fbe5cbb0e6a4babc, type: 2}
   Vertical: {fileID: 11400000, guid: cba081428118880488fbb5973ede5271, type: 2}
-  PlayerSates: {fileID: 11400000, guid: 63bd5ae7ab20c534090e72aa77b6f85f, type: 2}
+  PlayerStates: {fileID: 11400000, guid: 63bd5ae7ab20c534090e72aa77b6f85f, type: 2}
   InputUpdateBatch: {fileID: 11400000, guid: cb0673aee2886fc4b91ba2e91fe3e58d, type: 2}
