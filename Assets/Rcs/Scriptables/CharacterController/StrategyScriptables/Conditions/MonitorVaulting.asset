@@ -16,7 +16,13 @@ MonoBehaviour:
   VaultLayer:
     serializedVersion: 2
     m_Bits: 4096
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 2048
   origin1Offset: 1
   origin2Offset: 0.2
-  rayForwardDist: 1
+  ray1ForwardDist: 1
+  ray3ForwardDist: 2
   rayDownDist: 2
+  vaultOffsetPosition: 1.2
+  VaultWalkClip: {fileID: 7400000, guid: 0f10883d7ffe4364e977d410fef54f16, type: 2}

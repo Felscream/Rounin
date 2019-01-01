@@ -11,6 +11,7 @@ namespace SA
         public float VaultSpeed = 1.1f;
         public float vaultT;
         public bool isInit;
+        public float AnimLength;
     }
 }
 
