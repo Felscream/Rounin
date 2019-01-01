@@ -14,7 +14,7 @@ namespace SA
         public override bool CheckCondition(StateManager state)
         {
             float timeDifference = Time.realtimeSinceStartup - state.TimeSinceFall;
-            if (timeDifference > 0.5f)
+            if (timeDifference > 0.55f)
             {
                 bool result = state.IsGrounded;
                 
@@ -25,7 +25,7 @@ namespace SA
                     {
                         if(state.MovementVariables.MoveAmount > 0.3f)
                         {
-                            state.Animator.CrossFade(state.Hashes.FallAndRoll, 0.2f);
+                            state.Animator.CrossFade(state.Hashes.FallAndRoll, 0.1f);
                             Vector3 tarForce = state.mTransform.forward * RollForce;
                             tarForce.y = 0f;
                             state.Rigidbody.AddForce(tarForce, ForceMode.VelocityChange);
@@ -33,16 +33,16 @@ namespace SA
                         }
                         else
                         {
-                            state.Animator.CrossFade(state.Hashes.FallLandHard, 0.2f);
+                            state.Animator.CrossFade(state.Hashes.FallLandHard, 0.1f);
                         }
                     }
                     else if(timeDifference > MaxThreshold)
                     {
-                        state.Animator.CrossFade(state.Hashes.FallLandHard, 0.2f);
+                        state.Animator.CrossFade(state.Hashes.FallLandHard, 0.1f);
                     }
                     else
                     {
-                        state.Animator.CrossFade(state.Hashes.LandLowVelocity, 0.2f);
+                        state.Animator.CrossFade(state.Hashes.LandLowVelocity, 0.1f);
                     }
                 }
                 return result;

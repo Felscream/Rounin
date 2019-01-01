@@ -16,7 +16,7 @@ MonoBehaviour:
   WalkSpeed: 5
   MovementFloor: 0.1
   RunThreshold: 0.26
-  RaycastLength: 0.65
+  RaycastLength: 0.6
   StepHeight: 0.6
   SideAngle: 60
   EnvironmentLayer:

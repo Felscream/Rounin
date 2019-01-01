@@ -19,14 +19,16 @@ namespace SA
         
         public override void Execute(StateManager states)
         {
-            Color dbgColor = Color.blue;
+
             Vector3 origin = states.mTransform.position + Vector3.up * StepHeight;
             Vector2 inputsValues = new Vector2(states.MovementVariables.Horizontal, states.MovementVariables.Vertical);
             float speed = inputsValues.magnitude > RunThreshold ? MovementSpeed : WalkSpeed;
             if (CameraTransform != null)
             {
-                Vector3 tarDirection = CameraTransform.value.forward * inputsValues.x;
-                tarDirection += CameraTransform.value.right * inputsValues.y;
+                Color dbgColor = Color.blue;
+                
+                Vector3 tarDirection = CameraTransform.value.forward * inputsValues.y;
+                tarDirection += CameraTransform.value.right * inputsValues.x;
                 tarDirection.Normalize();
                 tarDirection.y = 0;
 
@@ -39,31 +41,22 @@ namespace SA
                 {
                     states.CanMoveForward = true;
                 }
-            }
-            
 
-            if(states.MovementVariables.MoveAmount > 0.1f && states.CanMoveForward)
-            {
-                states.Rigidbody.drag = 0f;
-                
-            }
-            else
-            {
-                states.Rigidbody.drag = 4f;
+                Debug.DrawLine(origin, origin + tarDirection * RaycastLength, dbgColor);
             }
             
             if (states.CanMoveForward && states.MovementVariables.MoveAmount > MovementFloor)
             {
+                states.Rigidbody.drag = 0f;
                 Vector3 tarVelocity = states.mTransform.forward * states.MovementVariables.MoveAmount * speed;
                 tarVelocity.y = states.Rigidbody.velocity.y;
                 states.Rigidbody.velocity = tarVelocity;
             }
             else
             {
+                states.Rigidbody.drag = 4f;
                 states.MovementVariables.MoveAmount = 0f;
             }
-
-            Debug.DrawLine(origin, origin + states.mTransform.forward * RaycastLength, dbgColor);
 
             CheckObstaclesOnSides(states, origin);
         }
