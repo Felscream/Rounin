@@ -12,11 +12,11 @@ namespace SA
         public State currentState;
 
         public MovementVariables MovementVariables;
-
+        public Animator Animator;
         [HideInInspector] public float delta;
         [HideInInspector] public Transform mTransform;
         [HideInInspector] public Rigidbody Rigidbody;
-        [HideInInspector] public Animator Animator;
+        
         [HideInInspector] public float TimeSinceFall;
 
         public AnimHashes Hashes;
@@ -27,11 +27,17 @@ namespace SA
         public bool CanMoveForward { get; set; }
         public bool IsBetweenObstacles { get; set; }
 
+        private void Awake()
+        {
+            if(Animator == null)
+                Animator = GetComponentInChildren<Animator>();
+        }
+
         private void Start()
         {
             mTransform = transform;
             Rigidbody = GetComponent<Rigidbody>();
-            Animator = GetComponentInChildren<Animator>();
+            
             Hashes = new AnimHashes();
             AnimData = new AnimatorData(Animator);
         }

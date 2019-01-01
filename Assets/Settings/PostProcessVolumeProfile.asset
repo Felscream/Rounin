@@ -84,8 +84,8 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   saturation:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 20
   brightness:
     overrideState: 0
     value: 0
@@ -1349,7 +1349,7 @@ MonoBehaviour:
     value: 1
   shutterAngle:
     overrideState: 1
-    value: 360
+    value: 270
   sampleCount:
     overrideState: 0
     value: 32
@@ -1488,7 +1488,7 @@ MonoBehaviour:
     value: 2
   threshold:
     overrideState: 1
-    value: 1.04
+    value: 1.01
   softKnee:
     overrideState: 0
     value: 0.5
@@ -1509,7 +1509,7 @@ MonoBehaviour:
     value: 0
   dirtTexture:
     overrideState: 1
-    value: {fileID: 2800000, guid: 001f3150169444c4ba77aa24fa980f57, type: 3}
+    value: {fileID: 0}
     defaultState: 1
   dirtIntensity:
     overrideState: 0

@@ -22,7 +22,7 @@ namespace SA
 
             Vector3 origin = states.mTransform.position + Vector3.up * StepHeight;
             Vector2 inputsValues = new Vector2(states.MovementVariables.Horizontal, states.MovementVariables.Vertical);
-            float speed = inputsValues.magnitude > RunThreshold ? MovementSpeed : WalkSpeed;
+            float speed = states.MovementVariables.MoveAmount > RunThreshold ? MovementSpeed : WalkSpeed;
             if (CameraTransform != null)
             {
                 Color dbgColor = Color.blue;

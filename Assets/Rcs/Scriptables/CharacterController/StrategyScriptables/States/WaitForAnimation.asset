@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09f12a9b8fb5e44eb81fa499afbecc4, type: 3}
   m_Name: WaitForAnimation
   m_EditorClassIdentifier: 
-  onFixed: []
-  onUpdate: []
-  onEnter: []
-  onExit: []
+  onFixed:
+  - {fileID: 11400000, guid: 6e2dcf35612678e4691a730e4ab608a4, type: 2}
+  onUpdate:
+  - {fileID: 11400000, guid: b15640f1a22bf7743870d9c6b92c6762, type: 2}
+  onEnter:
+  - {fileID: 0}
+  onExit:
+  - {fileID: 11400000, guid: 3e61593bd8f169240bf7867676303a3c, type: 2}
   idCount: 1
   transitions:
   - id: 0

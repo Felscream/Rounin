@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
 public class RagdollActivator : MonoBehaviour
 {
     public Rigidbody[] _rbs;
