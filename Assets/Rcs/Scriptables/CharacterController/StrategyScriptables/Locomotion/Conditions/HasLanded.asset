@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: HasLanded
   m_EditorClassIdentifier: 
   description: 
+  HardLandThreshold: 0.6
+  MaxThreshold: 2

@@ -12,6 +12,10 @@ namespace SA
         public int JumpIdle = Animator.StringToHash("JumpIdle");
         public int IsGrounded = Animator.StringToHash("IsGrounded");
         public int VerticalVelocity = Animator.StringToHash("VerticalVelocity");
+        public int LandLowVelocity = Animator.StringToHash("FallLandLowVelocity");
+        public int FallLandHard = Animator.StringToHash("FallLandHard");
+        public int FallAndRoll = Animator.StringToHash("FallAndRoll");
+        
     }
 }
 

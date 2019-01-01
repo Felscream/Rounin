@@ -12,7 +12,7 @@ namespace SA
         {
             Vector3 origin = states.mTransform.position;
             origin.y += .7f;
-            float d = 0.9f;
+            float d = 1.4f;
 
             RaycastHit hit;
             if(Physics.Raycast(origin, -Vector3.up, out hit, d, ~IgnoreLayer))
@@ -22,12 +22,6 @@ namespace SA
             else
             {
                 states.IsGrounded = false;
-                states.TimeSinceFall = Time.realtimeSinceStartup;
-            }
-
-            if (!states.IsGrounded)
-            {
-                states.Animator.SetFloat(states.Hashes.VerticalVelocity, Time.realtimeSinceStartup - states.TimeSinceGrounded);
             }
             states.Animator.SetBool(states.Hashes.IsGrounded, states.IsGrounded);
         }

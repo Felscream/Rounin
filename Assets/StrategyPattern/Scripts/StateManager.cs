@@ -18,7 +18,6 @@ namespace SA
         [HideInInspector] public Rigidbody Rigidbody;
         [HideInInspector] public Animator Animator;
         [HideInInspector] public float TimeSinceFall;
-        [HideInInspector] public float TimeSinceGrounded;
 
         public AnimHashes Hashes;
         public AnimatorData AnimData;

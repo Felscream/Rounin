@@ -10,9 +10,9 @@ namespace SA
 
         public override bool CheckCondition(StateManager state)
         {
-            if (!state.IsGrounded)
-                state.TimeSinceGrounded = Time.realtimeSinceStartup;
-
+            bool result = !state.IsGrounded;
+            if(result)
+                state.TimeSinceFall = Time.realtimeSinceStartup;
             return !state.IsGrounded;
         }
     }
