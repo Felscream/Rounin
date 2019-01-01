@@ -49,7 +49,14 @@ namespace SA
             {
                 states.Rigidbody.drag = 0f;
                 Vector3 tarVelocity = states.mTransform.forward * states.MovementVariables.MoveAmount * speed;
-                tarVelocity.y = states.Rigidbody.velocity.y;
+                if (!states.IsGrounded)
+                {
+                    tarVelocity.y = states.Rigidbody.velocity.y;
+                }
+                else
+                {
+                    tarVelocity.y = 0f;
+                }
                 states.Rigidbody.velocity = tarVelocity;
             }
             else

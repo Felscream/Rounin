@@ -1,14 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AnimatorData
+namespace SA
 {
-    public Transform LeftFoot;
-    public Transform RightFoot;
-
-    public AnimatorData(Animator anim)
+    public class AnimatorData
     {
-        LeftFoot = anim.GetBoneTransform(HumanBodyBones.LeftFoot);
-        RightFoot = anim.GetBoneTransform(HumanBodyBones.RightFoot);
+        public Transform LeftFoot;
+        public Transform RightFoot;
+        public Animator Animator;
+
+        public AnimatorData(Animator anim)
+        {
+            Animator = anim;
+            LeftFoot = anim.GetBoneTransform(HumanBodyBones.LeftFoot);
+            RightFoot = anim.GetBoneTransform(HumanBodyBones.RightFoot);
+
+            AnimatorHook aHook = anim.GetComponent<AnimatorHook>();
+            if (aHook == null)
+                aHook = aHook.gameObject.AddComponent<AnimatorHook>();
+            aHook.Data = this;
+        }
     }
 }
+

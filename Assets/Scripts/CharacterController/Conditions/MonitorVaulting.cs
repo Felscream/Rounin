@@ -15,7 +15,8 @@ namespace SA
         public float ray3ForwardDist = 2f;
         public float rayDownDist = 2f;
         public float vaultOffsetPosition = 1.5f;
-        public AnimationClip VaultWalkClip;
+
+        public VaultAnim[] VaultAnims;
 
         public override bool CheckCondition(StateManager state)
         {
@@ -25,7 +26,7 @@ namespace SA
 
             Vector3 dir = state.mTransform.forward;
             
-            Debug.DrawRay(origin, dir, Color.magenta);
+            Debug.DrawRay(origin, dir * ray1ForwardDist, Color.magenta);
             if(Physics.Raycast(origin, dir, out RaycastHit hit, ray1ForwardDist, VaultLayer))
             {
                 Vector3 origin2 = origin;
@@ -43,21 +44,42 @@ namespace SA
                     if (Physics.Raycast(origin3, -Vector3.up, out hit, rayDownDist, GroundLayer))
                     {
                         result = true;
-                        state.Animator.SetBool(state.Hashes.IsInteracting, true);
-                        state.Animator.CrossFade(state.Hashes.VaultWalk, 0.2f);
-                        
-                        state.VaultData.isInit = false;
-                        state.IsVaulting = true;
+                        VaultAnim v = CheckForVaultingAnim(state.mTransform.position, hit.point);
 
-                        state.VaultData.AnimLength = VaultWalkClip.length;
-                        state.VaultData.StartPosition = state.mTransform.position;
+                        if (v != null)
+                        {
+                            state.Animator.SetBool(state.Hashes.IsInteracting, true);
+                            state.Animator.CrossFade(v.AnimName, 0.2f);
+                            state.VaultData.AnimLength = v.VaultAnimation.length;
+                            state.VaultData.StartPosition = state.mTransform.position;
+                            Vector3 endPosition = firstHit;
+                            endPosition += normalDir * vaultOffsetPosition;
+                            endPosition.y = hit.point.y;
+                            state.VaultData.EndPosition = endPosition;
 
-                        Vector3 endPosition = firstHit;
-                        endPosition += normalDir * vaultOffsetPosition;
-                        state.VaultData.EndPosition = endPosition;
-
-
+                            state.VaultData.isInit = false;
+                            state.IsVaulting = true;
+                        }
                     }
+                }
+            }
+
+            return result;
+        }
+
+        public VaultAnim CheckForVaultingAnim(Vector3 origin, Vector3 hitPoint)
+        {
+            VaultAnim result = null;
+
+
+            float diff = hitPoint.y - origin.y;
+
+            for(int i = 0; i < VaultAnims.Length; ++i)
+            {
+                if(VaultAnims[i].DistanceFromGround - .05f < diff && VaultAnims[i].DistanceFromGround + .05f > diff)
+                {
+                    result = VaultAnims[i];
+                    break;
                 }
             }
 
