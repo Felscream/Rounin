@@ -8,6 +8,9 @@ namespace SA
     public class MoveForward : StateActions
     {
         public float MovementSpeed = 2f;
+        public float WalkSpeed = 1.5f;
+        public float MovementFloor = 0.1f;
+        public float RunThreshold = 0.6f;
         public float RaycastLength = 2f;
         public float StepHeight = 0.3f;
         public float SideAngle = 50f;
@@ -18,14 +21,12 @@ namespace SA
         {
             Color dbgColor = Color.blue;
             Vector3 origin = states.mTransform.position + Vector3.up * StepHeight;
-
-            if(CameraTransform != null)
+            Vector2 inputsValues = new Vector2(states.MovementVariables.Horizontal, states.MovementVariables.Vertical);
+            float speed = inputsValues.magnitude > RunThreshold ? MovementSpeed : WalkSpeed;
+            if (CameraTransform != null)
             {
-                float h = states.MovementVariables.Horizontal;
-                float v = states.MovementVariables.Vertical;
-
-                Vector3 tarDirection = CameraTransform.value.forward * v;
-                tarDirection += CameraTransform.value.right * h;
+                Vector3 tarDirection = CameraTransform.value.forward * inputsValues.x;
+                tarDirection += CameraTransform.value.right * inputsValues.y;
                 tarDirection.Normalize();
                 tarDirection.y = 0;
 
@@ -51,9 +52,9 @@ namespace SA
                 states.Rigidbody.drag = 4f;
             }
             
-            if (states.CanMoveForward)
+            if (states.CanMoveForward && states.MovementVariables.MoveAmount > MovementFloor)
             {
-                Vector3 tarVelocity = states.mTransform.forward * states.MovementVariables.MoveAmount * MovementSpeed;
+                Vector3 tarVelocity = states.mTransform.forward * states.MovementVariables.MoveAmount * speed;
                 tarVelocity.y = states.Rigidbody.velocity.y;
                 states.Rigidbody.velocity = tarVelocity;
             }

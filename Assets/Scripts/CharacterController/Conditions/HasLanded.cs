@@ -9,22 +9,27 @@ namespace SA
     {
         public float HardLandThreshold = 1.5f;
         public float MaxThreshold = 2.2f;
-        
+        public float RollForce = 3f;
+
         public override bool CheckCondition(StateManager state)
         {
             float timeDifference = Time.realtimeSinceStartup - state.TimeSinceFall;
             if (timeDifference > 0.5f)
             {
                 bool result = state.IsGrounded;
-
+                
                 if (result)
                 {
-                    Debug.Log(timeDifference);
-                    if(timeDifference > HardLandThreshold && timeDifference < MaxThreshold)
+                    state.Animator.SetBool(state.Hashes.IsInteracting, true);
+                    if (timeDifference > HardLandThreshold && timeDifference < MaxThreshold)
                     {
                         if(state.MovementVariables.MoveAmount > 0.3f)
                         {
                             state.Animator.CrossFade(state.Hashes.FallAndRoll, 0.2f);
+                            Vector3 tarForce = state.mTransform.forward * RollForce;
+                            tarForce.y = 0f;
+                            state.Rigidbody.AddForce(tarForce, ForceMode.VelocityChange);
+
                         }
                         else
                         {

@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aef9c6901272c14e942f4e160fa4ed7, type: 3}
-  m_Name: HasLanded
-  m_EditorClassIdentifier: 
+  m_Script: {fileID: 0}
+  m_Name: WaitForAnimationToEnd
+  m_EditorClassIdentifier: Assembly-CSharp:SA:WaitForAnimationToEnd
   description: 
-  HardLandThreshold: 0.6
-  MaxThreshold: 2
+  TargetBool: IsInteracting
