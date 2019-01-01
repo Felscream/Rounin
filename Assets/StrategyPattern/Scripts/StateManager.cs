@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace SA
 {
+    [RequireComponent(typeof(Collider))]
     [RequireComponent(typeof(Rigidbody))]
     public class StateManager : MonoBehaviour
     {
@@ -13,16 +14,18 @@ namespace SA
 
         public MovementVariables MovementVariables;
         public Animator Animator;
+        public VaultData VaultData;
         [HideInInspector] public float delta;
         [HideInInspector] public Transform mTransform;
         [HideInInspector] public Rigidbody Rigidbody;
-        
+        [HideInInspector] public Collider Collider;
         [HideInInspector] public float TimeSinceFall;
 
         public AnimHashes Hashes;
         public AnimatorData AnimData;
 
         public bool IsGrounded;
+        public bool IsVaulting;
 
         public bool CanMoveForward { get; set; }
         public bool IsBetweenObstacles { get; set; }
@@ -37,7 +40,7 @@ namespace SA
         {
             mTransform = transform;
             Rigidbody = GetComponent<Rigidbody>();
-            
+            Collider = GetComponent<Collider>();
             Hashes = new AnimHashes();
             AnimData = new AnimatorData(Animator);
         }

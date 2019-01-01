@@ -1001,7 +1001,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657712020}
-  m_LocalRotation: {x: -0.15784456, y: -0.1425661, z: 0.023036135, w: -0.97684664}
+  m_LocalRotation: {x: -0.15785089, y: -0.1422969, z: 0.022992626, w: -0.9768859}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1077,7 +1077,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658015691}
-  m_LocalRotation: {x: -0.024021033, y: -0.14437282, z: 0.0035055815, w: -0.98922557}
+  m_LocalRotation: {x: -0.024021994, y: -0.1441002, z: 0.003498943, w: -0.9892654}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1902,7 +1902,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235857029}
-  m_LocalRotation: {x: 0.026710095, y: 0.14436275, z: -0.0038982122, w: 0.9891566}
+  m_LocalRotation: {x: 0.026711168, y: 0.14409019, z: -0.0038908522, w: 0.98919636}
   m_LocalPosition: {x: -5.5577125e-16, y: 1.6627817, z: -1.9203193}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2101,7 +2101,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237956939}
-  m_LocalRotation: {x: -0.021329507, y: -0.12605004, z: 0.0027107308, w: -0.9917909}
+  m_LocalRotation: {x: -0.021329748, y: -0.12596054, z: 0.0027087985, w: -0.9918023}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2749,11 +2749,19 @@ MonoBehaviour:
     MoveAmount: 0
     MoveDirection: {x: 0, y: 0, z: 0}
   Animator: {fileID: 0}
+  VaultData:
+    StartPosition: {x: 0, y: 0, z: 0}
+    EndPosition: {x: 0, y: 0, z: 0}
+    VaultSpeed: 1.1
+    vaultT: 0
+    isInit: 0
   delta: 0
   mTransform: {fileID: 0}
   Rigidbody: {fileID: 0}
+  Collider: {fileID: 0}
   TimeSinceFall: 0
   IsGrounded: 0
+  IsVaulting: 0
 --- !u!1 &1488388308
 GameObject:
   m_ObjectHideFlags: 0
@@ -3013,7 +3021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 2049
+    m_Bits: 6145
   m_IgnoreTag: Player
   m_TransparentLayers:
     serializedVersion: 2

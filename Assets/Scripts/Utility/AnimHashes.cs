@@ -16,6 +16,7 @@ namespace SA
         public int FallLandHard = Animator.StringToHash("FallLandHard");
         public int FallAndRoll = Animator.StringToHash("FallAndRoll");
         public int IsInteracting = Animator.StringToHash("IsInteracting");
+        public int VaultWalk = Animator.StringToHash("Vault");
 
     }
 }
