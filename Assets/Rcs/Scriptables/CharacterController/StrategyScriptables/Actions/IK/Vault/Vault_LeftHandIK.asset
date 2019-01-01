@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b08e0d6470e8ef468badcc754a4be6f, type: 3}
-  m_Name: WaitForAnimationToEnd
-  m_EditorClassIdentifier: Assembly-CSharp:SA:WaitForAnimationToEnd
-  description: 
-  TargetBool: IsInteracting
+  m_Script: {fileID: 11500000, guid: 32dbfdd5d7f68f741b4ed3685978542e, type: 3}
+  m_Name: Vault_LeftHandIK
+  m_EditorClassIdentifier: 
+  IKGoal: 2
+  TargetCurve: 
+  OriginOffset: 0.2
+  FeetOffset: 0.1

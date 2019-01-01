@@ -15,16 +15,15 @@ MonoBehaviour:
   description: 
   VaultLayer:
     serializedVersion: 2
-    m_Bits: 6144
+    m_Bits: 4096
   GroundLayer:
     serializedVersion: 2
     m_Bits: 2048
   origin1Offset: 0.5
   origin2Offset: 0.51
-  ray1ForwardDist: 0.65
+  ray1ForwardDist: 1.3
   ray3ForwardDist: 2
   rayDownDist: 2
   vaultOffsetPosition: 1.2
   VaultAnims:
   - {fileID: 11400000, guid: b224cafd772fb9742a0fafa83f03edc4, type: 2}
-  - {fileID: 11400000, guid: fd796b2a570974f4cadedaa09bdf76af, type: 2}

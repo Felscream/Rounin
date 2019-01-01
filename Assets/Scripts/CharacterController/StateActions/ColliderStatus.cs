@@ -5,7 +5,7 @@ using UnityEngine;
 namespace SA
 {
 
-    [CreateAssetMenu(menuName = "Actions/State Actions/ColldierStatus")]
+    [CreateAssetMenu(menuName = "Actions/State Actions/ColliderStatus")]
     public class ColliderStatus : StateActions
     {
         public bool status;

@@ -14,6 +14,7 @@ namespace SA
 
         public MovementVariables MovementVariables;
         public Animator Animator;
+        public AnimatorHook AnimatorHook;
         public VaultData VaultData;
         [HideInInspector] public float delta;
         [HideInInspector] public Transform mTransform;
@@ -41,8 +42,18 @@ namespace SA
             mTransform = transform;
             Rigidbody = GetComponent<Rigidbody>();
             Collider = GetComponent<Collider>();
+            if(AnimatorHook == null)
+            {
+                AnimatorHook = GetComponentInChildren<AnimatorHook>();
+            }
+
             Hashes = new AnimHashes();
             AnimData = new AnimatorData(Animator);
+
+            if(currentState != null)
+            {
+                currentState.OnEnter(this);
+            }
         }
 
         private void FixedUpdate()

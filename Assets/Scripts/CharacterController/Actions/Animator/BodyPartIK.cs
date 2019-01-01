@@ -6,7 +6,7 @@ namespace SA
 {
 
     [CreateAssetMenu(menuName = "Actions/Animator Action/FootIk")]
-    public class FootIK : AnimatorAction
+    public class BodyPartIK : AnimatorAction
     {
         public AvatarIKGoal IKGoal;
         public string TargetCurve;

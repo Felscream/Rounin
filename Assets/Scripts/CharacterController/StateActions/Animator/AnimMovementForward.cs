@@ -8,6 +8,7 @@ namespace SA
     public class AnimMovementForward : StateActions
     {
         public StateActions[] StateActions;
+
         public override void Execute(StateManager states)
         {
             for(int i = 0; i < StateActions.Length; ++i)
