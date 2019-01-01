@@ -10,6 +10,7 @@ namespace SA
         public float MovementSpeed = 2f;
         public float RaycastLength = 2f;
         public float StepHeight = 0.3f;
+        public float SideAngle = 50f;
         public LayerMask EnvironmentLayer;
         public TransformVariable CameraTransform;
         
@@ -47,7 +48,7 @@ namespace SA
             }
             else
             {
-                states.Rigidbody.drag = 1f;
+                states.Rigidbody.drag = 4f;
             }
             
             if (states.CanMoveForward)
@@ -62,6 +63,32 @@ namespace SA
             }
 
             Debug.DrawLine(origin, origin + states.mTransform.forward * RaycastLength, dbgColor);
+
+            CheckObstaclesOnSides(states, origin);
+        }
+
+        private void CheckObstaclesOnSides(StateManager state, Vector3 origin)
+        {
+            Vector3 dir = Quaternion.AngleAxis(SideAngle, Vector3.up) * state.mTransform.forward;
+            
+            if(Physics.Raycast(origin, dir, RaycastLength, EnvironmentLayer))
+            {
+                Debug.DrawLine(origin, origin + dir, Color.green);
+                state.IsBetweenObstacles = true;
+            }
+            else
+            {
+                dir = Quaternion.AngleAxis(-SideAngle, Vector3.up) * state.mTransform.forward;
+                if (Physics.Raycast(origin, dir, RaycastLength, EnvironmentLayer))
+                {
+                    Debug.DrawLine(origin, origin + dir, Color.green);
+                    state.IsBetweenObstacles = true;
+                }
+                else
+                {
+                    state.IsBetweenObstacles = false;
+                }
+            }
         }
     }
 }

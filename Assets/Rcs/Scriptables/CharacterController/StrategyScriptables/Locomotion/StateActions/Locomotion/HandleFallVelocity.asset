@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61708a77695516842b7463045308af2c, type: 3}
-  m_Name: HandleJumpVelocity
+  m_Name: HandleFallVelocity
   m_EditorClassIdentifier: 
-  JumpSpeed: 2
-  IdleJumpSpeed: 4
+  TerminalVelocity: 50
+  FallMultiplier: 1.5

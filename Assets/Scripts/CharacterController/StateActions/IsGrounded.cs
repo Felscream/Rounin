@@ -22,10 +22,13 @@ namespace SA
             else
             {
                 states.IsGrounded = false;
-                Debug.Log("falling");
                 states.TimeSinceFall = Time.realtimeSinceStartup;
             }
 
+            if (!states.IsGrounded)
+            {
+                states.Animator.SetFloat(states.Hashes.VerticalVelocity, Time.realtimeSinceStartup - states.TimeSinceGrounded);
+            }
             states.Animator.SetBool(states.Hashes.IsGrounded, states.IsGrounded);
         }
     }

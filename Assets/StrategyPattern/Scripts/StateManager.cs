@@ -12,6 +12,7 @@ namespace SA
         public State currentState;
 
         public MovementVariables MovementVariables;
+
         [HideInInspector] public float delta;
         [HideInInspector] public Transform mTransform;
         [HideInInspector] public Rigidbody Rigidbody;
@@ -25,6 +26,8 @@ namespace SA
         public bool IsGrounded;
 
         public bool CanMoveForward { get; set; }
+        public bool IsBetweenObstacles { get; set; }
+
         private void Start()
         {
             mTransform = transform;

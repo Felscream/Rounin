@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: MoveForward
   m_EditorClassIdentifier: 
   MovementSpeed: 3
-  RaycastLength: 0.8
+  RaycastLength: 0.65
   StepHeight: 0.6
+  SideAngle: 60
   EnvironmentLayer:
     serializedVersion: 2
     m_Bits: 2048
