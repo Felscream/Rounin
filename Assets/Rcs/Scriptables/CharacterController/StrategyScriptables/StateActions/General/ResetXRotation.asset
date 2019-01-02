@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb2a56f15fbdd448a6e8718848fe69a, type: 3}
-  m_Name: IsGrounded
+  m_Script: {fileID: 11500000, guid: 291cebe1c18dece4ea7b063b31dab599, type: 3}
+  m_Name: ResetXRotation
   m_EditorClassIdentifier: 
-  GroundedDistance: 1.4
-  InAirDistance: 0.8

@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42fb41cdc29cc0e41a3296afb24e30eb, type: 3}
   m_Name: WalkUpData
   m_EditorClassIdentifier: 
-  DistanceFromGround: 0.5
+  IsDown: 0
+  min: 0.2
+  max: 0.51
+  Speed: 1
+  AnimOffset: 1
   VaultAnimation: {fileID: 7400000, guid: b1d68b0f7b08e614e917ed51ac71f554, type: 2}
   SpeedCurve:
     serializedVersion: 2

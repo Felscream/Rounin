@@ -14,7 +14,9 @@ namespace SA
         public float ray1ForwardDist = 1f;
         public float ray3ForwardDist = 2f;
         public float rayDownDist = 2f;
+        public float ray2DownDist = 4f;
         public float vaultOffsetPosition = 1.5f;
+        public float RayDownOffset = .5f;
 
         public VaultAnim[] VaultAnims;
 
@@ -40,20 +42,22 @@ namespace SA
                 if (!Physics.Raycast(origin2, dir, ray1ForwardDist, VaultLayer))
                 {
                     Vector3 origin3 = origin2 + dir * ray3ForwardDist;
-                    Debug.DrawRay(origin3, -Vector3.up, Color.magenta, 30f);
+                    Debug.DrawRay(origin3, -Vector3.up, Color.magenta);
                     if (Physics.Raycast(origin3, -Vector3.up, out hit, rayDownDist, GroundLayer))
                     {
-                        result = true;
-                        VaultAnim v = CheckForVaultingAnim(state.mTransform.position, hit.point);
+                        VaultAnim v = CheckForVaultingAnim(state.mTransform.position, hit.point, false);
 
                         if (v != null)
                         {
+                            result = true;
                             state.Animator.SetBool(state.Hashes.IsInteracting, true);
                             state.Animator.CrossFade(v.AnimName, 0.2f);
+                            state.VaultData.VaultSpeed = v.Speed;
                             state.VaultData.AnimLength = v.VaultAnimation.length;
                             state.VaultData.StartPosition = state.mTransform.position;
                             Vector3 endPosition = firstHit;
-                            endPosition += normalDir * vaultOffsetPosition;
+                            
+                            endPosition += normalDir * v.AnimOffset;
                             endPosition.y = hit.point.y;
                             state.VaultData.EndPosition = endPosition;
 
@@ -64,23 +68,51 @@ namespace SA
                 }
             }
 
+            if(!result)
+            {
+                Vector3 origin4 = origin + dir * RayDownOffset;
+                Debug.DrawRay(origin4, -Vector3.up, Color.magenta);
+                if (Physics.Raycast(origin4, -Vector3.up, out hit, ray2DownDist, GroundLayer))
+                {
+                    VaultAnim v = CheckForVaultingAnim(state.mTransform.position, hit.point, true);
+                    if (v != null)
+                    {
+                        result = true;
+                        state.Animator.SetBool(state.Hashes.IsInteracting, true);
+                        state.Animator.CrossFade(v.AnimName, 0.2f);
+                        state.VaultData.VaultSpeed = v.Speed;
+                        state.VaultData.AnimLength = v.VaultAnimation.length;
+                        state.VaultData.StartPosition = state.mTransform.position;
+                        Vector3 endPosition = hit.point;
+                        endPosition += v.AnimOffset * state.mTransform.forward;
+                        state.VaultData.EndPosition = endPosition;
+
+                        state.VaultData.isInit = false;
+                        state.IsVaulting = true;
+                    }
+                }
+            }
+
             return result;
         }
 
-        public VaultAnim CheckForVaultingAnim(Vector3 origin, Vector3 hitPoint)
+        public VaultAnim CheckForVaultingAnim(Vector3 origin, Vector3 hitPoint, bool isDown)
         {
             VaultAnim result = null;
 
 
             float diff = hitPoint.y - origin.y;
-
             for(int i = 0; i < VaultAnims.Length; ++i)
             {
-                if(VaultAnims[i].DistanceFromGround - .05f < diff && VaultAnims[i].DistanceFromGround + .05f > diff)
+                if (isDown && !VaultAnims[i].IsDown)
+                    continue;
+
+                if (VaultAnims[i].min < diff && VaultAnims[i].max > diff)
                 {
                     result = VaultAnims[i];
                     break;
                 }
+                
             }
 
             return result;

@@ -2173,6 +2173,7 @@ MonoBehaviour:
     MoveAmount: 0
     MoveDirection: {x: 0, y: 0, z: 0}
   Animator: {fileID: 0}
+  AnimatorHook: {fileID: 0}
   VaultData:
     StartPosition: {x: 0, y: 0, z: 0}
     EndPosition: {x: 0, y: 0, z: 0}
@@ -3070,9 +3071,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d51bedc3ba11920409883647515d27ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 11400000, guid: 9e8748886ffce5f4c98ff6e4b51c7693, type: 2}
-  - {fileID: 11400000, guid: 4c67d8bb899469141815685f6f79b47a, type: 2}
 --- !u!1 &1949410005
 GameObject:
   m_ObjectHideFlags: 0

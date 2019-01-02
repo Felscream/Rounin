@@ -18,6 +18,12 @@ public class MinMaxRange
 {
     public float rangeStart, rangeEnd;
 
+    public MinMaxRange(float s, float e)
+    {
+        rangeStart = s;
+        rangeEnd = e;
+    }
+
     public float GetRandomValue()
     {
         return Random.Range(rangeStart, rangeEnd);

@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09f12a9b8fb5e44eb81fa499afbecc4, type: 3}
   m_Name: Vaulting
   m_EditorClassIdentifier: 
-  onFixed: []
+  onFixed:
+  - {fileID: 11400000, guid: b3f682ebb24f78f42a34d0e2f9648640, type: 2}
   onUpdate:
   - {fileID: 11400000, guid: 3cb8a24326463674dba3f5fed4879ade, type: 2}
+  - {fileID: 11400000, guid: b3f682ebb24f78f42a34d0e2f9648640, type: 2}
   onEnter:
   - {fileID: 11400000, guid: 79382e608b8c94b4f8349c33d3713e10, type: 2}
   onExit:
   - {fileID: 11400000, guid: b3fc23a79cd29eb4ca0f7a792f3a4820, type: 2}
+  - {fileID: 11400000, guid: b3f682ebb24f78f42a34d0e2f9648640, type: 2}
   idCount: 1
   transitions:
   - id: 0
