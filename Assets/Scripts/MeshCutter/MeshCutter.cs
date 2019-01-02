@@ -81,7 +81,7 @@ public class MeshCutter : MonoBehaviour
         };
 
         Vector3 center = transform.position + vFo / 2f;
-        Collider[] hits = Physics.OverlapBox(center, new Vector3(0.1f, Up, Forward / 2f), Quaternion.AngleAxis(_angle, transform.forward), TargetLayer);
+        Collider[] hits = Physics.OverlapBox(center, new Vector3(0.1f, Up, Forward / 2f), Quaternion.LookRotation(transform.forward, vUp.normalized), TargetLayer);
         Debug.Log(hits.Length);
         /*GameObject go = _pool.SpawnFromPool("Cut", Vector3.zero, Quaternion.identity);
         Cut c = go.GetComponent<Cut>();

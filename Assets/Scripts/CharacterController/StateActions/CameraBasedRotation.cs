@@ -29,6 +29,7 @@ namespace SA
                 tarDirection = states.mTransform.forward;
             }
 
+            states.MovementVariables.MoveDirection = tarDirection;
             Quaternion q = Quaternion.LookRotation(tarDirection);
             Quaternion targetRotation = Quaternion.Slerp(states.mTransform.rotation, q, states.delta * states.MovementVariables.MoveAmount * speed);
 

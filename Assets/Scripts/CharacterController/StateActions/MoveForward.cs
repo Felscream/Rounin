@@ -9,7 +9,6 @@ namespace SA
     {
         public float MovementSpeed = 2f;
         public float WalkSpeed = 1.5f;
-        public float MovementFloor = 0.1f;
         public float RunThreshold = 0.6f;
         public float RaycastLength = 2f;
         public float StepHeight = 0.3f;
@@ -26,11 +25,8 @@ namespace SA
             if (CameraTransform != null)
             {
                 Color dbgColor = Color.blue;
-                
-                Vector3 tarDirection = CameraTransform.value.forward * inputsValues.y;
-                tarDirection += CameraTransform.value.right * inputsValues.x;
-                tarDirection.Normalize();
-                tarDirection.y = 0;
+
+                Vector3 tarDirection = states.MovementVariables.MoveDirection;
 
                 if (Physics.Raycast(origin, tarDirection, RaycastLength, EnvironmentLayer))
                 {
@@ -45,7 +41,7 @@ namespace SA
                 Debug.DrawLine(origin, origin + tarDirection * RaycastLength, dbgColor);
             }
             
-            if (states.CanMoveForward && states.MovementVariables.MoveAmount > MovementFloor)
+            if (states.CanMoveForward && states.MovementVariables.MoveAmount > Constants.MovementThreshold)
             {
                 states.Rigidbody.drag = 0f;
                 Vector3 tarVelocity = states.mTransform.forward * states.MovementVariables.MoveAmount * speed;

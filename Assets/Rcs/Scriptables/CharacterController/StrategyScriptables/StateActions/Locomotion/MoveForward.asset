@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSpeed: 3
   WalkSpeed: 5
-  MovementFloor: 0.1
   RunThreshold: 0.26
-  RaycastLength: 0.6
+  RaycastLength: 0.8
   StepHeight: 0.6
   SideAngle: 60
   EnvironmentLayer:
