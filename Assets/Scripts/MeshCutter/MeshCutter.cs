@@ -9,7 +9,9 @@ public class MeshCutter : MonoBehaviour
     public float ScrollWeight = 5f;
     public LayerMask TargetLayer;
     private float _angle = 0f;
-    private ObjectPooling _pool;
+
+    public Material CapMaterial;
+
 
     private void OnGUI()
     {
@@ -41,11 +43,6 @@ public class MeshCutter : MonoBehaviour
         Gizmos.DrawWireCube(center, new Vector3(0.05f, Up * 2f, Forward));
     }
 
-    private void Start()
-    {
-        _pool = ObjectPooling.Instance;
-    }
-
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -70,24 +67,29 @@ public class MeshCutter : MonoBehaviour
             transform.position + vFo + vUp,
             transform.position + vFo - vUp,
         };
-
-        int[] triangles = new int[3] {0, 1, 2};
+        
         Vector3 normal = Vector3.Cross(vertices[0] - vertices[1], vertices[0] - vertices[2]).normalized;
-
-        Mesh plane = new Mesh
-        {
-            vertices = vertices,
-            triangles = triangles
-        };
 
         Vector3 center = transform.position + vFo / 2f;
         Collider[] hits = Physics.OverlapBox(center, new Vector3(0.1f, Up, Forward / 2f), Quaternion.LookRotation(transform.forward, vUp.normalized), TargetLayer);
         Debug.Log(hits.Length);
-        /*GameObject go = _pool.SpawnFromPool("Cut", Vector3.zero, Quaternion.identity);
-        Cut c = go.GetComponent<Cut>();
-        if (c != null)
+        for (int i = 0; i < hits.Length; ++i)
         {
-            c.Mesh = plane;
-        }*/
+            GameObject victim = hits[i].gameObject;
+
+            GameObject[] pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, normal, CapMaterial);
+            if (pieces == null)
+                continue;
+
+            for(int j =0; j < pieces.Length; ++j)
+            {
+                pieces[j].transform.SetParent(null);
+            }
+            if (!pieces[1].GetComponent<Rigidbody>())
+                pieces[1].AddComponent<Rigidbody>();
+
+            //Destroy(pieces[1], 1);
+        }
+
     }
 }

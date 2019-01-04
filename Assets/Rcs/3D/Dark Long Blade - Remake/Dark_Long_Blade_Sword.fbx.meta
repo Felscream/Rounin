@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: 2e8d35978835660439f6b9335f2aa8a8
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Dark_Long_Blade_Sword
+    100004: Sword_15_low.001_Sword.158
+    100006: Sword_16_low.001_Sword.151
+    100008: Sword_17_low.001_Sword.159
+    100010: Sword_18_low.001_Sword.176
+    100012: Sword_19_low.001_Sword.165
+    100014: Sword_20_low.001_Sword.168
+    100016: Sword_21_low.001_Sword.169
+    100018: Sword_22_low.001_Sword.157
+    100020: Sword_23_low.001_Sword.153
+    100022: Sword_24_low.001_Sword.173
+    100024: Sword_25_low.001_Sword.179
+    100026: Sword_26_low.001_Sword.166
+    100028: Sword_27_low.001_Sword.164
+    100030: Sword_28_low.001_Sword.150
+    100032: Sword_29_low.001_Sword.170
+    100034: Sword_30_low.001_Sword.174
+    100036: Sword_31_low.001_Sword.162
+    100038: Sword_32_low.001_Sword.178
+    100040: Sword_33_low.001_Sword.172
+    100042: Sword_34_low.001_Sword.155
+    100044: Sword_35_low.001_Sword.177
+    100046: Sword_36_low.001_Sword.163
+    100048: Sword_37_low.001_Sword.167
+    100050: Sword_38_low.001_Sword.175
+    100052: Sword_39_low.001_Sword.160
+    100054: Sword_40_low.001_Sword.154
+    100056: Sword_41_low.001_Sword.161
+    100058: Sword_42_low.001_Sword.152
+    100060: Sword_43_low.001_Sword.171
+    100062: Sword_44_low.001_Sword.156
+    100064: transform14
+    100066: transform15
+    100068: transform16
+    100070: transform17
+    100072: transform18
+    100074: transform19
+    100076: transform20
+    100078: transform21
+    100080: transform22
+    100082: transform23
+    100084: transform24
+    100086: transform25
+    100088: transform26
+    100090: transform27
+    100092: transform28
+    100094: transform29
+    100096: transform30
+    100098: transform31
+    100100: transform32
+    100102: transform33
+    100104: transform34
+    100106: transform35
+    100108: transform36
+    100110: transform37
+    100112: transform38
+    100114: transform39
+    100116: transform40
+    100118: transform41
+    100120: transform42
+    100122: transform43
+    400000: Dark_Long_Blade_Sword
+    400002: //RootNode
+    400004: Sword_15_low.001_Sword.158
+    400006: Sword_16_low.001_Sword.151
+    400008: Sword_17_low.001_Sword.159
+    400010: Sword_18_low.001_Sword.176
+    400012: Sword_19_low.001_Sword.165
+    400014: Sword_20_low.001_Sword.168
+    400016: Sword_21_low.001_Sword.169
+    400018: Sword_22_low.001_Sword.157
+    400020: Sword_23_low.001_Sword.153
+    400022: Sword_24_low.001_Sword.173
+    400024: Sword_25_low.001_Sword.179
+    400026: Sword_26_low.001_Sword.166
+    400028: Sword_27_low.001_Sword.164
+    400030: Sword_28_low.001_Sword.150
+    400032: Sword_29_low.001_Sword.170
+    400034: Sword_30_low.001_Sword.174
+    400036: Sword_31_low.001_Sword.162
+    400038: Sword_32_low.001_Sword.178
+    400040: Sword_33_low.001_Sword.172
+    400042: Sword_34_low.001_Sword.155
+    400044: Sword_35_low.001_Sword.177
+    400046: Sword_36_low.001_Sword.163
+    400048: Sword_37_low.001_Sword.167
+    400050: Sword_38_low.001_Sword.175
+    400052: Sword_39_low.001_Sword.160
+    400054: Sword_40_low.001_Sword.154
+    400056: Sword_41_low.001_Sword.161
+    400058: Sword_42_low.001_Sword.152
+    400060: Sword_43_low.001_Sword.171
+    400062: Sword_44_low.001_Sword.156
+    400064: transform14
+    400066: transform15
+    400068: transform16
+    400070: transform17
+    400072: transform18
+    400074: transform19
+    400076: transform20
+    400078: transform21
+    400080: transform22
+    400082: transform23
+    400084: transform24
+    400086: transform25
+    400088: transform26
+    400090: transform27
+    400092: transform28
+    400094: transform29
+    400096: transform30
+    400098: transform31
+    400100: transform32
+    400102: transform33
+    400104: transform34
+    400106: transform35
+    400108: transform36
+    400110: transform37
+    400112: transform38
+    400114: transform39
+    400116: transform40
+    400118: transform41
+    400120: transform42
+    400122: transform43
+    2100000: M_Dark_Long_Blade-Remake.002
+    2300000: Dark_Long_Blade_Sword
+    3300000: Dark_Long_Blade_Sword
+    4300000: Dark_Long_Blade_Sword
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Dark_Long_Blade-Remake.002
+    second: {fileID: 2100000, guid: 246557914d857514aa75ada61f1a158c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

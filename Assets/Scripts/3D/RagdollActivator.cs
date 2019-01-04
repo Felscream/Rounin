@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RagdollActivator : MonoBehaviour
 {
-    public Rigidbody[] _rbs;
+    public GameObject BonesRoot;
     public Animator _animationController;
 
     private void Start()
@@ -27,10 +27,6 @@ public class RagdollActivator : MonoBehaviour
             _animationController.enabled = !value;
         }
 
-        for(int i = 0; i < _rbs.Length; ++i)
-        {
-            if(_rbs[i].gameObject != gameObject)
-                _rbs[i].isKinematic = !value;
-        }
+        BonesRoot.gameObject.SetActive(value);
     }
 }

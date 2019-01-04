@@ -16,7 +16,7 @@ MonoBehaviour:
   min: -0.05
   max: 0.05
   Speed: 1
-  AnimOffset: 2
+  AnimOffset: 1
   VaultAnimation: {fileID: 7400000, guid: 0f10883d7ffe4364e977d410fef54f16, type: 2}
   SpeedCurve:
     serializedVersion: 2

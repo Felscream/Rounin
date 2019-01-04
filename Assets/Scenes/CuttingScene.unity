@@ -118,7 +118,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-88282
+  m_Name: pb_Mesh20978
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -284,26 +284,13 @@ GameObject:
   - component: {fileID: 340059335}
   - component: {fileID: 340059334}
   - component: {fileID: 340059333}
-  - component: {fileID: 340059332}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &340059332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340059331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 250dc099ba2d2f047821604a53fa2adf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &340059333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -474,10 +461,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Forward: 3
   Up: 1
-  ScrollWeight: 5
+  ScrollWeight: 200
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1536
+  CapMaterial: {fileID: 2100000, guid: dbe80190c9adea34c8c8845ca4a17934, type: 2}
 --- !u!114 &988495783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1377,51 +1365,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1921748773
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1921748775}
-  - component: {fileID: 1921748774}
-  m_Layer: 0
-  m_Name: ObjectPooling
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1921748774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921748773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b044b3d77e73424aa1e750102c53790, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pools:
-  - Code: Cut
-    ObjectPrefab: {fileID: 2230389474716573128, guid: d32eb447a31d6c94c8d6b6f6022119d3,
-      type: 3}
-    Size: 5
---- !u!4 &1921748775
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921748773}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.3359833, y: 0.80497146, z: 5.732193}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

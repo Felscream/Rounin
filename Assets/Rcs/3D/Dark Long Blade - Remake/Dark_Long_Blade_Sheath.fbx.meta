@@ -1,0 +1,151 @@
+fileFormatVersion: 2
+guid: 9d60e2f1c56008845a06b6979c2d0a0b
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Dark_Long_Blade_Sheath
+    100004: Sword_10_low.001_Sheath.069
+    100006: Sword_11_low.001_Sheath.076
+    100008: Sword_12_low.001_Sheath.065
+    100010: Sword_13_low.001_Sheath.074
+    100012: Sword_1_low.001_Sheath.077
+    100014: Sword_2_low.001_Sheath.072
+    100016: Sword_3_low.001_Sheath.067
+    100018: Sword_4_low.001_Sheath.071
+    100020: Sword_5_low.001_Sheath.075
+    100022: Sword_6_low.001_Sheath.073
+    100024: Sword_7_low.001_Sheath.068
+    100026: Sword_8_low.001_Sheath.070
+    100028: Sword_9_low.001_Sheath.066
+    100030: transform1
+    100032: transform10
+    100034: transform11
+    100036: transform12
+    100038: transform13
+    100040: transform2
+    100042: transform3
+    100044: transform4
+    100046: transform5
+    100048: transform6
+    100050: transform7
+    100052: transform8
+    100054: transform9
+    400000: Dark_Long_Blade_Sheath
+    400002: //RootNode
+    400004: Sword_10_low.001_Sheath.069
+    400006: Sword_11_low.001_Sheath.076
+    400008: Sword_12_low.001_Sheath.065
+    400010: Sword_13_low.001_Sheath.074
+    400012: Sword_1_low.001_Sheath.077
+    400014: Sword_2_low.001_Sheath.072
+    400016: Sword_3_low.001_Sheath.067
+    400018: Sword_4_low.001_Sheath.071
+    400020: Sword_5_low.001_Sheath.075
+    400022: Sword_6_low.001_Sheath.073
+    400024: Sword_7_low.001_Sheath.068
+    400026: Sword_8_low.001_Sheath.070
+    400028: Sword_9_low.001_Sheath.066
+    400030: transform1
+    400032: transform10
+    400034: transform11
+    400036: transform12
+    400038: transform13
+    400040: transform2
+    400042: transform3
+    400044: transform4
+    400046: transform5
+    400048: transform6
+    400050: transform7
+    400052: transform8
+    400054: transform9
+    2100000: M_Dark_Long_Blade-Remake.003
+    2300000: Dark_Long_Blade_Sheath
+    3300000: Dark_Long_Blade_Sheath
+    4300000: Dark_Long_Blade_Sheath
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Dark_Long_Blade-Remake.003
+    second: {fileID: 2100000, guid: 246557914d857514aa75ada61f1a158c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

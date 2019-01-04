@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9451f501215d1418ffc7f9fd447feb, type: 3}
   m_Name: VaultIKBehaviour
   m_EditorClassIdentifier: 
-  UpdateToEmptyValues: 1
-  IKActions: []
+  UpdateEmptyValues: 1
+  IKActions:
+  - {fileID: 11400000, guid: 9e8748886ffce5f4c98ff6e4b51c7693, type: 2}
+  - {fileID: 11400000, guid: 4c67d8bb899469141815685f6f79b47a, type: 2}

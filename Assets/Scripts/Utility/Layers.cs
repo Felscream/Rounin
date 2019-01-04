@@ -8,6 +8,6 @@ public static class Layers
 
     static Layers()
     {
-        IgnoreLayersIsGrounded = ~(1 << 3 | 1<< 4 | 1 << 8 | 1 << 9 | 1 << 10);
+        IgnoreLayersIsGrounded = ~(1 << 3 | 1<< 4 | 1 << 8 | 1 << 9 | 1 << 11);
     }
 }
