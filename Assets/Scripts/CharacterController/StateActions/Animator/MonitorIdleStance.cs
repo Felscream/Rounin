@@ -20,8 +20,10 @@ namespace SA
             }
             else
             {
-                if(Time.time > TimeToIdle)
+                
+                if (Time.time > TimeToIdle && !states.Animator.GetBool(states.Hashes.StandingIdle))
                 {
+                    states.Animator.SetFloat(states.Hashes.IdleRand, Mathf.Round(Random.Range(0f, 1f)));
                     states.Animator.SetBool(states.Hashes.StandingIdle, true);
                 }
             }

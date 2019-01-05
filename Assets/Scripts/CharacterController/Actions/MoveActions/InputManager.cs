@@ -5,7 +5,7 @@ using SO;
 
 namespace SA
 {
-    [CreateAssetMenu(menuName = "Actions/Mono Actions/Input Manager")]
+    
     public class InputManager : Action
     {
         public FloatVariable Horizontal;

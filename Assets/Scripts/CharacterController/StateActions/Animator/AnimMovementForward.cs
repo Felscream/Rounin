@@ -15,6 +15,7 @@ namespace SA
             {
                 StateActions[i].Execute(states);
             }
+            
 
             if (states.CanMoveForward)
             {

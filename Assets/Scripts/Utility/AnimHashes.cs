@@ -8,8 +8,8 @@ namespace SA
         public int Speed = Animator.StringToHash("Speed");
         public int LeftFootForsward = Animator.StringToHash("LeftFootForward");
         public int StandingIdle = Animator.StringToHash("StandingIdle");
+        public int IdleRand = Animator.StringToHash("IdleRand");
         public int JumpForward = Animator.StringToHash("JumpForward");
-        public int JumpIdle = Animator.StringToHash("JumpIdle");
         public int IsGrounded = Animator.StringToHash("IsGrounded");
         public int VerticalVelocity = Animator.StringToHash("VerticalVelocity");
         public int LandLowVelocity = Animator.StringToHash("FallLandLowVelocity");
@@ -17,7 +17,6 @@ namespace SA
         public int FallAndRoll = Animator.StringToHash("FallAndRoll");
         public int IsInteracting = Animator.StringToHash("IsInteracting");
         public int VaultWalk = Animator.StringToHash("Vault");
-
     }
 }
 

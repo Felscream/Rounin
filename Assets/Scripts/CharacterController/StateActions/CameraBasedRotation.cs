@@ -8,19 +8,19 @@ namespace SA
     [CreateAssetMenu(menuName ="Actions/State Actions/Camera Based Rotation")]
     public class CameraBasedRotation : StateActions
     {
-        public TransformVariable CameraTransform;
         public float speed = 1f;
 
         public override void Execute(StateManager states)
         {
-            if (CameraTransform == null)
+            if (states.PlayerVariables.CameraTransform == null)
                 return;
 
             float h = states.MovementVariables.Horizontal;
             float v = states.MovementVariables.Vertical;
 
-            Vector3 tarDirection = CameraTransform.value.forward * v;
-            tarDirection += CameraTransform.value.right * h;
+            Transform camera = states.PlayerVariables.CameraTransform.value;
+            Vector3 tarDirection = camera.forward * v;
+            tarDirection += camera.right * h;
             tarDirection.Normalize();
             tarDirection.y = 0;
 

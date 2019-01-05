@@ -7,6 +7,7 @@ public class IKController : MonoBehaviour
 {
     
     public Transform RighHandObj;
+    public Transform LeftHandObj;
     public Transform LookObj;
 
     public float GrabTime = 1f;
@@ -46,10 +47,11 @@ public class IKController : MonoBehaviour
         {
             _bias = Mathf.Lerp(0f, 1f, 1 - (Time.time - _ikTimeBounds.x) / (_ikTimeBounds.y - _ikTimeBounds.x));
         }
-        SetGoalsAndWeights(_bias);
+        SetGoalsAndWeights(AvatarIKGoal.RightHand, _bias, RighHandObj);
+        SetGoalsAndWeights(AvatarIKGoal.LeftHand, _bias, LeftHandObj);
     }
 
-    private void SetGoalsAndWeights(float weight)
+    private void SetGoalsAndWeights(AvatarIKGoal limb, float weight, Transform target)
     {
         if(weight > 0f)
         if (LookObj != null)
@@ -60,11 +62,11 @@ public class IKController : MonoBehaviour
 
         if (RighHandObj != null)
         {
-            _animator.SetIKPositionWeight(AvatarIKGoal.RightHand, weight);
-            _animator.SetIKRotationWeight(AvatarIKGoal.RightHand, weight);
+            _animator.SetIKPositionWeight(limb, weight);
+            _animator.SetIKRotationWeight(limb, weight);
             
-            _animator.SetIKPosition(AvatarIKGoal.RightHand, RighHandObj.position);
-            _animator.SetIKRotation(AvatarIKGoal.RightHand, RighHandObj.rotation); 
+            _animator.SetIKPosition(limb, target.position);
+            _animator.SetIKRotation(limb, target.rotation); 
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SO;
 
 namespace SA
 {
@@ -11,10 +12,11 @@ namespace SA
         public float health;
         
         public State currentState;
-
-        public MovementVariables MovementVariables;
+        
+        
         public Animator Animator;
         public AnimatorHook AnimatorHook;
+        public PlayerVariables PlayerVariables;
         public VaultData VaultData;
         [HideInInspector] public float delta;
         [HideInInspector] public Transform mTransform;
@@ -24,6 +26,10 @@ namespace SA
 
         public AnimHashes Hashes;
         public AnimatorData AnimData;
+
+        [Header("Input Variables")]
+        [HideInInspector] public MovementVariables MovementVariables;
+        [HideInInspector] public CameraVariables CameraVariables;
 
         public bool IsGrounded;
         public bool IsVaulting;

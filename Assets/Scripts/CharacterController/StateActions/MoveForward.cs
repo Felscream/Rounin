@@ -14,7 +14,6 @@ namespace SA
         public float StepHeight = 0.3f;
         public float SideAngle = 50f;
         public LayerMask EnvironmentLayer;
-        public TransformVariable CameraTransform;
         
         public override void Execute(StateManager states)
         {
@@ -22,7 +21,7 @@ namespace SA
             Vector3 origin = states.mTransform.position + Vector3.up * StepHeight;
             Vector2 inputsValues = new Vector2(states.MovementVariables.Horizontal, states.MovementVariables.Vertical);
             float speed = states.MovementVariables.MoveAmount > RunThreshold ? MovementSpeed : WalkSpeed;
-            if (CameraTransform != null)
+            if (states.PlayerVariables.CameraTransform != null)
             {
                 Color dbgColor = Color.blue;
 
@@ -43,7 +42,7 @@ namespace SA
             
             if (states.CanMoveForward && states.MovementVariables.MoveAmount > Constants.MovementThreshold)
             {
-                states.Rigidbody.drag = 0f;
+                states.Animator.applyRootMotion = false;
                 Vector3 tarVelocity = states.mTransform.forward * states.MovementVariables.MoveAmount * speed;
                 if (!states.IsGrounded)
                 {

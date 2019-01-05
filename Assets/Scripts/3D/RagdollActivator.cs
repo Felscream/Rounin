@@ -2,31 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class RagdollActivator : MonoBehaviour
 {
-    public GameObject BonesRoot;
-    public Animator _animationController;
+    public Rigidbody[] RagDollRigidBodies;
+    public Collider[] RagDollColliders;
+    private Animator _animationController;
 
-    private void Start()
+    private void Awake()
     {
         _animationController = GetComponent<Animator>();
-        SetRagdoll(false);
+        ActivateRagDoll(false);
     }
 
-    private void Update()
+    public void ActivateRagDoll(bool value)
     {
-        if (Input.GetMouseButtonDown(0))
+        for(int i = 0; i < RagDollRigidBodies.Length; ++i)
         {
-            SetRagdoll(true);
+            if(RagDollRigidBodies[i] != null)
+            {
+                RagDollRigidBodies[i].isKinematic = !value;
+            }
+           /* if (RagDollColliders[i] != null)
+                RagDollColliders[i].enabled = value;*/
         }
-    }
-    public void SetRagdoll(bool value)
-    {
+
         if(_animationController != null)
         {
             _animationController.enabled = !value;
         }
-
-        BonesRoot.gameObject.SetActive(value);
     }
 }

@@ -9,12 +9,10 @@ namespace SA
     public class CinemachineUpdateChange : StateActions
     {
         public Cinemachine.CinemachineBrain.UpdateMethod UpdateMethod;
-        public CinemachineBrainVariable Variable;
 
         public override void Execute(StateManager states)
         {
-            Debug.Log("Execute");
-            Variable.value.m_UpdateMethod = UpdateMethod;
+            states.PlayerVariables.CinemachineBrain.value.m_UpdateMethod = UpdateMethod;
         }
     }
 }
