@@ -9,15 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d71985c0280ba7547bd6d52969a816fd, type: 3}
-  m_Name: FocusTarget
+  m_Script: {fileID: 11500000, guid: 5b08e0d6470e8ef468badcc754a4be6f, type: 3}
+  m_Name: WaitForDodgeToEnd
   m_EditorClassIdentifier: 
-  TargetLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  ObstaclesLayer:
-    serializedVersion: 2
-    m_Bits: 3072
-  RaycastYOffset: 1
-  FocusAngleRange: -0.55
-  UpdatePeriod: 1
+  description: 
+  TargetBool: IsInteracting

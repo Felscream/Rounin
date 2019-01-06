@@ -43,9 +43,9 @@ namespace SA
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(transform.position, Constants.FocusRange);
+            Gizmos.DrawWireSphere(PlayerVariables.CombatCameraTransform.value.position, Constants.FocusRange);
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, Constants.FocusLossRange);
+            Gizmos.DrawWireSphere(PlayerVariables.CombatCameraTransform.value.position, Constants.FocusLossRange);
         }
 
         private void Awake()

@@ -9,6 +9,8 @@ namespace SA
     public class FocusTarget : StateActions
     {
         public LayerMask TargetLayer;
+        public LayerMask ObstaclesLayer;
+        public float RaycastYOffset = 1f;
 
         [Range(-1f, 1f)] public float FocusAngleRange = -0.3f;
         public float UpdatePeriod = 1f;
@@ -21,7 +23,8 @@ namespace SA
             }
             else if(states.Target != null)
             {
-                if (Vector3.Distance(states.PlayerVariables.CameraTransform.value.transform.position, states.Target.position) > Constants.FocusLossRange)
+                if (Vector3.Distance(states.PlayerVariables.CameraTransform.value.transform.position, states.Target.position) > Constants.FocusLossRange 
+                    || AreObstaclesOnTheWay(states, states.Target))
                 {
                     NullTarget(states);
                 }
@@ -71,7 +74,7 @@ namespace SA
                 }
             }
 
-            if (closest != null)
+            if (closest != null && !AreObstaclesOnTheWay(s, closest))
             {
                 ComputeAngle(s, closest);
             }
@@ -93,6 +96,27 @@ namespace SA
             {
                 NullTarget(states);
             }
+        }
+
+        private bool AreObstaclesOnTheWay(StateManager s, Transform target)
+        {
+            bool result = true;
+
+            if(target != null)
+            {
+                Vector3 origin = s.PlayerVariables.CombatCameraTransform.value.position;
+                Vector3 dir = (target.position + Vector3.up * RaycastYOffset) - origin;
+                Debug.DrawRay(origin, dir, Color.green);
+                RaycastHit hit;
+                if (Physics.Raycast(origin, dir.normalized, out hit, Constants.FocusLossRange, ObstaclesLayer | TargetLayer))
+                {
+                    Debug.Log(hit.collider.gameObject.name);
+                    if(1 << hit.collider.gameObject.layer == TargetLayer)
+                        result = false;
+                }
+            }
+
+            return result;
         }
     }
 }

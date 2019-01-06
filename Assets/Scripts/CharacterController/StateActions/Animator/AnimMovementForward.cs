@@ -17,7 +17,7 @@ namespace SA
             }
 
             
-            if (states.CanMoveForward)
+            if (states.CanMoveForward || states.IsInCombat)
             {
                 states.Animator.SetFloat(states.Hashes.Speed, states.MovementVariables.MoveAmount, 0.1f, states.delta);
                 states.Animator.SetFloat(states.Hashes.MoveX, states.MovementVariables.Horizontal, 0.1f, states.delta);

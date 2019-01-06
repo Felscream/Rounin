@@ -8,6 +8,7 @@ namespace SA
     public class GeneralInputVariables
     {
         public float LeftTrigger;
+        public bool ADown;
     }
 }
 

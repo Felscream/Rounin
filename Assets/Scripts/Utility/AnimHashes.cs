@@ -24,6 +24,10 @@ namespace SA
         public int CombatIdle = Animator.StringToHash("Combat.Idle");
         public int EquipWeapon = Animator.StringToHash("EquipWeapon.Equip");
         public int UnequipWeapon = Animator.StringToHash("EquipWeapon.Unequip");
+
+        public int Dodge = Animator.StringToHash("DodgeTrigger");
+        public int DodgeX = Animator.StringToHash("DodgeX");
+        public int DodgeY = Animator.StringToHash("DodgeY");
     }
 }
 
