@@ -17,7 +17,7 @@
 		_NoiseResolution("Noise Resolution", Vector) = (0,0,0)
 	}
 		SubShader{
-			Tags { "Queue" = "Transparent " "RenderType" = "Transparent" }
+			Tags { "Queue" = "Opaque " "RenderType" = "Transparent" }
 
 			CGPROGRAM
 				#include "UnityCG.cginc"

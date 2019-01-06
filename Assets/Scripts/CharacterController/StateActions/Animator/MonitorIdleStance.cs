@@ -9,7 +9,7 @@ namespace SA
     {
         public float DelayToIdle = 7f;
 
-        private float TimeToIdle = 0f;
+        public float TimeToIdle = 0f;
 
         public override void Execute(StateManager states)
         {
@@ -24,7 +24,7 @@ namespace SA
             else
             {
                 
-                if (Time.time > TimeToIdle && !states.Animator.GetBool(states.Hashes.StandingIdle))
+                if (Time.time > TimeToIdle && (!states.Animator.GetBool(states.Hashes.StandingIdle) || !states.Animator.applyRootMotion ))
                 {
                     states.Animator.SetFloat(states.Hashes.IdleRand, Mathf.Round(Random.Range(0f, 1f)));
                     states.Animator.SetBool(states.Hashes.StandingIdle, true);
