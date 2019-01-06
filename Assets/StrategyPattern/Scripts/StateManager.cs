@@ -13,7 +13,6 @@ namespace SA
         
         public State currentState;
         
-        
         public Animator Animator;
         public AnimatorHook AnimatorHook;
         public PlayerVariables PlayerVariables;
@@ -27,20 +26,36 @@ namespace SA
         public AnimHashes Hashes;
         public AnimatorData AnimData;
 
-        [Header("Input Variables")]
+        [Header("DBG Input Variables")]
         [HideInInspector] public MovementVariables MovementVariables;
         [HideInInspector] public CameraVariables CameraVariables;
+        [HideInInspector] public GeneralInputVariables InputVariables;
 
         public bool IsGrounded;
+        public bool IsInCombat;
         public bool IsVaulting;
 
         public bool CanMoveForward { get; set; }
         public bool IsBetweenObstacles { get; set; }
+        public bool WeaponEquipped { get; set; }
+        public Transform Target;
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(transform.position, Constants.FocusRange);
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, Constants.FocusLossRange);
+        }
 
         private void Awake()
         {
             if(Animator == null)
                 Animator = GetComponentInChildren<Animator>();
+            if (AnimatorHook == null)
+            {
+                AnimatorHook = GetComponentInChildren<AnimatorHook>();
+            }
         }
 
         private void Start()
@@ -48,10 +63,7 @@ namespace SA
             mTransform = transform;
             Rigidbody = GetComponent<Rigidbody>();
             Collider = GetComponent<Collider>();
-            if(AnimatorHook == null)
-            {
-                AnimatorHook = GetComponentInChildren<AnimatorHook>();
-            }
+            
 
             Hashes = new AnimHashes();
             AnimData = new AnimatorData(Animator);

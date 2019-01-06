@@ -13,7 +13,7 @@ namespace SA
             bool result = !state.IsGrounded;
             if(result)
                 state.TimeSinceFall = Time.realtimeSinceStartup;
-            return !state.IsGrounded;
+            return result;
         }
     }
 }

@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 namespace SA
 {
     [CreateAssetMenu(menuName = "Variables/CinemachineFreeLookCameraVariable")]
     public class CinemachineFreeLookCameraVariable : ScriptableObject
     {
-        public Cinemachine.CinemachineFreeLook value;
+        public CinemachineFreeLook value;
+        public CinemachineVirtualCamera combat;
+        public CinemachineConfiner confiner;
 
-        public void Set(Cinemachine.CinemachineFreeLook v)
+        public void Set(CinemachineFreeLook v, CinemachineConfiner cc)
         {
             value = v;
+            confiner = cc;
         }
     }
 }

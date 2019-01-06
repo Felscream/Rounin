@@ -10,5 +10,6 @@ public class PlayerVariables : ScriptableObject
     public CinemachineBrainVariable CinemachineBrain;
     public CinemachineFreeLookCameraVariable CinemachineCamera;
     public TransformVariable CameraTransform;
+    public TransformVariable CombatCameraTransform;
     public PhysicMaterial SlideMaterial;
 }

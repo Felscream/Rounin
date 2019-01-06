@@ -12,6 +12,7 @@ namespace SA
         private void OnEnable()
         {
             TargetVariable.value = GetComponent<Cinemachine.CinemachineFreeLook>();
+            TargetVariable.confiner = GetComponent<Cinemachine.CinemachineConfiner>();
         }
     }
 }

@@ -15,15 +15,19 @@ namespace SA
             {
                 StateActions[i].Execute(states);
             }
-            
 
+            
             if (states.CanMoveForward)
             {
                 states.Animator.SetFloat(states.Hashes.Speed, states.MovementVariables.MoveAmount, 0.1f, states.delta);
+                states.Animator.SetFloat(states.Hashes.MoveX, states.MovementVariables.Horizontal, 0.1f, states.delta);
+                states.Animator.SetFloat(states.Hashes.MoveY, states.MovementVariables.Vertical, 0.1f, states.delta);
             }
             else
             {
                 states.Animator.SetFloat(states.Hashes.Speed, 0f, 0.1f, states.delta);
+                states.Animator.SetFloat(states.Hashes.MoveX, 0f, 0.1f, states.delta);
+                states.Animator.SetFloat(states.Hashes.MoveY, 0f, 0.1f, states.delta);
             }
         }
     }

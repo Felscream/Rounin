@@ -19,7 +19,9 @@ public class PlayerInput : ScriptableObject
         {
             Movement();
 
-            CameraControl();
+            CameraControls();
+
+            GeneralControls();
         }
     }
 
@@ -31,10 +33,15 @@ public class PlayerInput : ScriptableObject
         PlayerStates.Value.MovementVariables.MoveAmount = Mathf.Clamp01(Mathf.Abs(Controller.Stick_L.X) + Mathf.Abs(Controller.Stick_L.Y));
     }
 
-    private void CameraControl()
+    private void CameraControls()
     {
         PlayerStates.Value.CameraVariables.Horizontal = Controller.Stick_R.X;
         PlayerStates.Value.CameraVariables.Vertical = RightYInverted ? -Controller.Stick_R.Y : Controller.Stick_R.Y;
+    }
+
+    private void GeneralControls()
+    {
+        PlayerStates.Value.InputVariables.LeftTrigger = Controller.GetTrigger_L();
     }
 }
 

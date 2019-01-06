@@ -16,18 +16,22 @@ namespace SA
         public Vector3 HandAnchorPosition;
         public Vector3 HandAnchorRotation;
 
+        public StateManager _stateManager;
+
         public void EquipWeaponToHand()
         {
             Weapon.parent = HandAnchor;
             Weapon.localPosition = HandAnchorPosition;
-            Weapon.rotation = Quaternion.Euler(HandAnchorRotation);
+            Weapon.localRotation = Quaternion.Euler(HandAnchorRotation);
+            _stateManager.WeaponEquipped = true;
         }
 
         public void UnequipWeapon()
         {
             Weapon.parent = Holster;
             Weapon.localPosition = HolsterPosition;
-            Weapon.rotation = Quaternion.Euler(HolsterRotation);
+            Weapon.localRotation = Quaternion.Euler(HolsterRotation);
+            _stateManager.WeaponEquipped = false;
         }
     }
 }

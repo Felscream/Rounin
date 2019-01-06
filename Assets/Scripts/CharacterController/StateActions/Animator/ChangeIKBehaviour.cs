@@ -15,8 +15,10 @@ namespace SA
         {
             for(int i = 0; i < IKActions.Length; ++i)
             {
-                if(IKActions[i] != null || UpdateEmptyValues)
+                if(IKActions[i] != null)
                     states.AnimatorHook.ChangeIKAction(IKActions[i].IKGoal, IKActions[i]);
+                else if(UpdateEmptyValues)
+                    states.AnimatorHook.ChangeIKAction(AvatarIKGoal.LeftFoot, null);
             }
         }
     }

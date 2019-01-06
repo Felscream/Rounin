@@ -17,6 +17,9 @@ namespace SA
             {
                 TimeToIdle = Time.time + DelayToIdle;
                 states.Animator.SetBool(states.Hashes.StandingIdle, false);
+                states.Animator.applyRootMotion = false;
+                states.Animator.transform.localPosition = Vector3.zero;
+                states.Animator.transform.localRotation = Quaternion.identity;
             }
             else
             {
@@ -25,6 +28,10 @@ namespace SA
                 {
                     states.Animator.SetFloat(states.Hashes.IdleRand, Mathf.Round(Random.Range(0f, 1f)));
                     states.Animator.SetBool(states.Hashes.StandingIdle, true);
+                    if (!states.Animator.IsInTransition(0))
+                    {
+                        states.Animator.applyRootMotion = true;
+                    }
                 }
             }
         }
