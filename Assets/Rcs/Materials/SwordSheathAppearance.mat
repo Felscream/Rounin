@@ -8,17 +8,26 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SwordSheathAppearance
-  m_Shader: {fileID: 4800000, guid: 79c884a7015b1a54d80d448468eb75bf, type: 3}
-  m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+  m_Shader: {fileID: 4800000, guid: 5b6a9ce32c9e7394294524118268c25c, type: 3}
+  m_ShaderKeywords: _ACTIVATEEMISSION_ON _EMISSION _ENABLERIMLIGHT_ON _METALLICGLOSSMAP
+    _NORMALMAP _TINTINSIDECOLOR_ON
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: 92072baf6d23c9044a1ed749f33c301d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bordertexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: 47b802fe5309bc9499672c694db16bbc, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -39,6 +48,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 5d054dd4b59e67a46a110b430e3cb45a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Emission:
+        m_Texture: {fileID: 2800000, guid: 536c96ec402650144b62c6712aa8dca0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 2800000, guid: 536c96ec402650144b62c6712aa8dca0, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -55,6 +68,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: cef0da5e5397bc2449d665038b25bd26, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: 47b802fe5309bc9499672c694db16bbc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -63,34 +84,88 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Secondaryemission:
+        m_Texture: {fileID: 2800000, guid: 536c96ec402650144b62c6712aa8dca0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Secondaryemissionnoise:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Specular:
+        m_Texture: {fileID: 2800000, guid: cef0da5e5397bc2449d665038b25bd26, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _Activateemission: 1
+    - _Activatesecondaryemission: 0
+    - _Borderwidth: -3
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DissolveScale: -0.22
     - _DissolveWidth: 0.085
     - _DstBlend: 0
+    - _Enablerimlight: 1
+    - _Fill: 0.43
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _GlowColFac: 0.85
     - _GlowIntensity: 4.5
     - _GlowScale: 1.7
+    - _Invertmask: 0
+    - _Layernoise: 0
     - _Metallic: 0
     - _Mode: 0
+    - _Noisescale: 0
+    - _Noisetexopacity: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Rimlightbias: -0.88
+    - _Rimlightpower: 3.5
+    - _Rimlightscale: -0.72
+    - _SecondaryEmissionDesaturation: 0
+    - _SecondaryEmissionNoiseDesaturation: 0
+    - _Smoothness: 0.75
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Tintinsidecolor: 1
     - _UVSec: 0
+    - _Wave1amplitude: 0.152
+    - _Wave1frequency: 0.0001
+    - _Wave1offset: 0
+    - _Wave2Frequency: 0
+    - _Wave2amplitude: 0
+    - _Wave2offset: 0
+    - _Worldcoordinates: 0
     - _ZWrite: 1
+    - __dirty: 1
     m_Colors:
+    - _Basecolor: {r: 7.046588, g: 0, b: 0, a: 1}
+    - _Bordercolor: {r: 2.572549, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveEnd: {r: 0, g: 0, b: 0, a: 1}
     - _DissolveStart: {r: 0, g: 1, b: 0, a: 1}
     - _Emission: {r: 112.74542, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 14.093178, g: 0, b: 0, a: 1}
+    - _Emissiontexspeed: {r: 0, g: 0, b: 0, a: 0}
+    - _Emissiontextiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Fillcolor: {r: 7.046588, g: 0, b: 0, a: 1}
     - _Glow: {r: 7.5607843, g: 0, b: 0, a: 1}
     - _GlowEnd: {r: 0, g: 1.8186555, b: 2, a: 1}
+    - _Mainoffset: {r: 0, g: 0, b: 0, a: 0}
+    - _Maintiling: {r: 1, g: 1, b: 0, a: 0}
     - _NoiseResolution: {r: 0, g: 0, b: 0, a: 1}
+    - _Noisespeed: {r: 0.1, g: -0.03, b: 0, a: 0}
+    - _Noisetexspeed: {r: 0, g: 0, b: 0, a: 0}
+    - _Noisetextiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Rimlightcolor: {r: 4, g: 0.047058824, b: 0, a: 1}
+    - _Secondaryemissioncolor: {r: 7.046588, g: 0, b: 0, a: 1}
+    - _Secondaryemissionspeed: {r: 0, g: 0, b: 0, a: 0}
+    - _Secondaryemissiontiling: {r: 0, g: 1, b: 0, a: 0}

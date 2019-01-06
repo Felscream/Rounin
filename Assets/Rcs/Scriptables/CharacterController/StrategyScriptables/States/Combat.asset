@@ -23,8 +23,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 34307b70b08cfc942a164f8e775956d4, type: 2}
   - {fileID: 11400000, guid: ba5ed5980f0073c4d9804763b92de196, type: 2}
   - {fileID: 11400000, guid: f1f54939e4d159146bad863dd2c82cee, type: 2}
-  onEnter:
-  - {fileID: 11400000, guid: 9e57e9c4f5032324597c64f601a2386d, type: 2}
+  - {fileID: 11400000, guid: ba57db4d77441cb45808aa6ac7473935, type: 2}
+  onEnter: []
   onExit:
   - {fileID: 11400000, guid: 927ef8dfd0f62f347ab1db9ba429e2fc, type: 2}
   - {fileID: 11400000, guid: 6f35c144d56de3b4f9c446e46ea436f1, type: 2}
