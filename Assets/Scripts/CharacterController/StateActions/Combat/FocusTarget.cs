@@ -110,7 +110,6 @@ namespace SA
                 RaycastHit hit;
                 if (Physics.Raycast(origin, dir.normalized, out hit, Constants.FocusLossRange, ObstaclesLayer | TargetLayer))
                 {
-                    Debug.Log(hit.collider.gameObject.name);
                     if(1 << hit.collider.gameObject.layer == TargetLayer)
                         result = false;
                 }

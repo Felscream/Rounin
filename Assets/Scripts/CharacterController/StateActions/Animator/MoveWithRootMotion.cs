@@ -7,13 +7,14 @@ namespace SA
     [CreateAssetMenu(menuName ="Actions/State Actions/MoveWithRootMotion")]
     public class MoveWithRootMotion : StateActions
     {
+        public float Multiplier = 60f;
         public override void Execute(StateManager states)
         {
             states.Animator.transform.localPosition = Vector3.zero;
             states.Rigidbody.drag = 0f;
             Vector3 v = states.Rigidbody.velocity;
             Vector3 tarVelocity = states.Animator.deltaPosition;
-            tarVelocity *= 60f;
+            tarVelocity *= Multiplier;
             tarVelocity.y = v.y;
             states.Rigidbody.velocity = tarVelocity;
         }

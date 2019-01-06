@@ -19,7 +19,7 @@ namespace X360
 
         private void Update()
         {
-            _inputManager.UpdateControllers();
+            _inputManager.ResfreshControllers();
         }
     }
 }

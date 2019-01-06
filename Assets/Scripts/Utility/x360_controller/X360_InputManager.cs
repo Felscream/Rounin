@@ -48,6 +48,14 @@ namespace X360
             }
         }
 
+        public void ResfreshControllers()
+        {
+            for (int i = 0; i < _controllers.Count; ++i)
+            {
+                _controllers[i].Refresh();
+            }
+        }
+
         public X360_controller GetController(int index)
         {
             for(int i = 0; i < _controllers.Count; ++i)

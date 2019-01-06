@@ -12,11 +12,17 @@ namespace SA
             if (states.Target != null)
             {
                 states.PlayerVariables.CinemachineCamera.combat.LookAt = states.Target;
+                AxisState.Recentering ast = states.PlayerVariables.CinemachineCamera.value.m_RecenterToTargetHeading;
+                ast.m_enabled = true;
+                ast.RecenterNow();
+                states.PlayerVariables.CinemachineCamera.value.m_RecenterToTargetHeading.RecenterNow();
                 states.PlayerVariables.CinemachineCamera.combat.Priority = 11;
                 states.PlayerVariables.CinemachineCamera.value.Priority = 10;
             }
             else
             {
+                AxisState.Recentering ast = states.PlayerVariables.CinemachineCamera.value.m_RecenterToTargetHeading;
+                ast.m_enabled = true;
                 states.PlayerVariables.CinemachineCamera.combat.LookAt = states.mTransform;
                 states.PlayerVariables.CinemachineCamera.combat.Priority = 10;
                 states.PlayerVariables.CinemachineCamera.value.Priority = 11;

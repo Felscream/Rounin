@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b08e0d6470e8ef468badcc754a4be6f, type: 3}
-  m_Name: WaitForDodgeToEnd
+  m_Script: {fileID: 11500000, guid: 27759279cd0e3d04f8eeb2fc211a115e, type: 3}
+  m_Name: IsDodging
   m_EditorClassIdentifier: 
   description: 
-  TargetBool: IsDodging

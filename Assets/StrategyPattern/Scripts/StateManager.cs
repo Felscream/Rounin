@@ -34,6 +34,7 @@ namespace SA
         public bool IsGrounded;
         public bool IsInCombat;
         public bool IsVaulting;
+        public bool IsDodging;
 
         public bool CanMoveForward { get; set; }
         public bool IsBetweenObstacles { get; set; }

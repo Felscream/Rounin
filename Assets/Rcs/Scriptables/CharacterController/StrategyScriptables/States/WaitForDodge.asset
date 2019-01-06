@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: WaitForDodge
   m_EditorClassIdentifier: 
   onFixed:
-  - {fileID: 11400000, guid: 6e2dcf35612678e4691a730e4ab608a4, type: 2}
-  onUpdate: []
+  - {fileID: 11400000, guid: 1bb127d1454f57044bceaf2fc9f6b026, type: 2}
+  - {fileID: 11400000, guid: ab59ba2958760944f93e616c5e4a59a9, type: 2}
+  - {fileID: 11400000, guid: bac811141624eab4588aa2fb17257b74, type: 2}
+  onUpdate:
+  - {fileID: 11400000, guid: ab59ba2958760944f93e616c5e4a59a9, type: 2}
+  - {fileID: 11400000, guid: ae243ab85cd41744faa0dbd062d65f42, type: 2}
+  - {fileID: 11400000, guid: ba5ed5980f0073c4d9804763b92de196, type: 2}
+  - {fileID: 11400000, guid: f1f54939e4d159146bad863dd2c82cee, type: 2}
   onEnter:
   - {fileID: 11400000, guid: b15640f1a22bf7743870d9c6b92c6762, type: 2}
   onExit:

@@ -42,7 +42,7 @@ public class PlayerInput : ScriptableObject
     private void GeneralControls()
     {
         PlayerStates.Value.InputVariables.LeftTrigger = Controller.GetTrigger_L();
-        PlayerStates.Value.InputVariables.ADown = Controller.GetButtonDown("A");
+        PlayerStates.Value.InputVariables.ADown = Controller.GetButtonDown(InputConstants.A);
     }
 }
 
