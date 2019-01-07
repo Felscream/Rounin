@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f776473a51c44c4390c1022717ea124, type: 3}
   m_Name: MoveWithRootMotion
   m_EditorClassIdentifier: 
+  Multiplier: 40

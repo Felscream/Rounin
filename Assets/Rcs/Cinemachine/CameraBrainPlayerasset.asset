@@ -17,7 +17,7 @@ MonoBehaviour:
     m_To: CombatCamera
     m_Blend:
       m_Style: 5
-      m_Time: 0.4
+      m_Time: 0.9
       m_CustomCurve:
         serializedVersion: 2
         m_Curve: []
@@ -27,7 +27,7 @@ MonoBehaviour:
   - m_From: CombatCamera
     m_To: ThirdPersonCamera
     m_Blend:
-      m_Style: 2
+      m_Style: 6
       m_Time: 1.4
       m_CustomCurve:
         serializedVersion: 2

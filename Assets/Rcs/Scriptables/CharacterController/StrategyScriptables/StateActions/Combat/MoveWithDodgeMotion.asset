@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66dc4acbf70d672478918c999288c343, type: 3}
   m_Name: MoveWithDodgeMotion
   m_EditorClassIdentifier: 
-  Dash: 40
-  BackDodge: 80
-  LeftDodge: 50
-  RightDodge: 60
+  Dash: 30
+  BackDodge: 50
+  LeftDodge: 35
+  RightDodge: 35

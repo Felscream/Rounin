@@ -10,10 +10,14 @@ namespace SA
     {
         public override void Execute(StateManager states)
         {
-            states.Target = null;
-            states.PlayerVariables.CinemachineCamera.combat.LookAt = states.mTransform;
-            states.PlayerVariables.CinemachineCamera.combat.Priority = 10;
-            states.PlayerVariables.CinemachineCamera.value.Priority = 11;
+            if(!states.IsDodging)
+            {
+                states.Target = null;
+                states.PlayerVariables.CinemachineCamera.combat.LookAt = states.mTransform;
+                states.PlayerVariables.CinemachineCamera.combat.Priority = 10;
+                states.PlayerVariables.CinemachineCamera.value.Priority = 11;
+            }
+            
         }
     }
 }

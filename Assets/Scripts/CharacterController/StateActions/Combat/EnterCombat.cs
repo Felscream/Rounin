@@ -16,6 +16,7 @@ namespace SA
             if (states.WeaponEquipped && !CombatState && states.IsGrounded)
             {
                 states.Animator.CrossFade(states.Hashes.UnequipWeapon, 0.2f);
+                states.AnimatorHook.LookAtActivated = false;
             }
             
         }

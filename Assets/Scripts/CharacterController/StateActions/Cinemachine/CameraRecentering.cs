@@ -11,7 +11,7 @@ namespace SA
         
         public override void Execute(StateManager states)
         {
-            bool value = states.MovementVariables.MoveAmount < Constants.MovementThreshold;
+            bool value = states.MovementVariables.MoveAmount == 0f;
 
             states.PlayerVariables.CinemachineCamera.value.m_YAxisRecentering.m_enabled = value;
             states.PlayerVariables.CinemachineCamera.value.m_RecenterToTargetHeading.m_enabled = value;

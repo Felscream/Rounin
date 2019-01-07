@@ -30,7 +30,7 @@ namespace SA
             }
             else
             {
-                states.Rigidbody.drag = 4f;
+                states.Rigidbody.drag = 8f;
             }
         }
     }
