@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MonitorIdleStance
   m_EditorClassIdentifier: 
   DelayToIdle: 7
-  TimeToIdle: 89.65431
+  TimeToIdle: 73.50435

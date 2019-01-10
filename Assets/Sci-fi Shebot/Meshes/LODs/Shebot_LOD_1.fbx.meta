@@ -1,0 +1,1032 @@
+fileFormatVersion: 2
+guid: bc21dd006ea766947b036db3b0f2fc28
+timeCreated: 1482416647
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Shebot_Attachments_ArmArmor
+    100002: Shebot_Attachments_ShoulderArmor
+    100004: Shebot_Body
+    100006: Shebot_Body_Attachment
+    100008: Shebot_Body_Attachment_backWireGuide
+    100010: Shebot_Body_Attachments_NeckArmor
+    100012: Shebot_Body_Attachments_NeckPipe1
+    100014: Shebot_Body_Attachments_Spine
+    100016: Shebot_Chest
+    100018: Shebot_Head
+    100020: Shebot_HeadEnd
+    100022: Shebot_Hips
+    100024: Shebot_LeftArm
+    100026: Shebot_LeftFoot
+    100028: Shebot_LeftForeArm
+    100030: Shebot_LeftHand
+    100032: Shebot_LeftHandIndex1
+    100034: Shebot_LeftHandIndex2
+    100036: Shebot_LeftHandIndex3
+    100038: Shebot_LeftHandIndex4
+    100040: Shebot_LeftHandMiddle1
+    100042: Shebot_LeftHandMiddle2
+    100044: Shebot_LeftHandMiddle3
+    100046: Shebot_LeftHandMiddle4
+    100048: Shebot_LeftHandPinky1
+    100050: Shebot_LeftHandPinky2
+    100052: Shebot_LeftHandPinky3
+    100054: Shebot_LeftHandPinky4
+    100056: Shebot_LeftHandRing1
+    100058: Shebot_LeftHandRing2
+    100060: Shebot_LeftHandRing3
+    100062: Shebot_LeftHandRing4
+    100064: Shebot_LeftHandThumb1
+    100066: Shebot_LeftHandThumb2
+    100068: Shebot_LeftHandThumb3
+    100070: Shebot_LeftHandThumb4
+    100072: Shebot_LeftLeg
+    100074: Shebot_LeftShoulder
+    100076: Shebot_LeftToe
+    100078: Shebot_LeftToeBase
+    100080: Shebot_LeftUpLeg
+    100082: Shebot_Leg_L
+    100084: Shebot_Leg_R
+    100086: //RootNode
+    100088: Shebot_Neck
+    100090: Shebot_RightArm
+    100092: Shebot_RightFoot
+    100094: Shebot_RightForeArm
+    100096: Shebot_RightHand
+    100098: Shebot_RightHandIndex1
+    100100: Shebot_RightHandIndex2
+    100102: Shebot_RightHandIndex3
+    100104: Shebot_RightHandIndex4
+    100106: Shebot_RightHandMiddle1
+    100108: Shebot_RightHandMiddle2
+    100110: Shebot_RightHandMiddle3
+    100112: Shebot_RightHandMiddle4
+    100114: Shebot_RightHandPinky1
+    100116: Shebot_RightHandPinky2
+    100118: Shebot_RightHandPinky3
+    100120: Shebot_RightHandPinky4
+    100122: Shebot_RightHandRing1
+    100124: Shebot_RightHandRing2
+    100126: Shebot_RightHandRing3
+    100128: Shebot_RightHandRing4
+    100130: Shebot_RightHandThumb1
+    100132: Shebot_RightHandThumb2
+    100134: Shebot_RightHandThumb3
+    100136: Shebot_RightHandThumb4
+    100138: Shebot_RightLeg
+    100140: Shebot_RightShoulder
+    100142: Shebot_RightToe
+    100144: Shebot_RightToeBase
+    100146: Shebot_RightUpLeg
+    100148: Shebot_Root
+    100150: Shebot_Spine
+    400000: Shebot_Attachments_ArmArmor
+    400002: Shebot_Attachments_ShoulderArmor
+    400004: Shebot_Body
+    400006: Shebot_Body_Attachment
+    400008: Shebot_Body_Attachment_backWireGuide
+    400010: Shebot_Body_Attachments_NeckArmor
+    400012: Shebot_Body_Attachments_NeckPipe1
+    400014: Shebot_Body_Attachments_Spine
+    400016: Shebot_Chest
+    400018: Shebot_Head
+    400020: Shebot_HeadEnd
+    400022: Shebot_Hips
+    400024: Shebot_LeftArm
+    400026: Shebot_LeftFoot
+    400028: Shebot_LeftForeArm
+    400030: Shebot_LeftHand
+    400032: Shebot_LeftHandIndex1
+    400034: Shebot_LeftHandIndex2
+    400036: Shebot_LeftHandIndex3
+    400038: Shebot_LeftHandIndex4
+    400040: Shebot_LeftHandMiddle1
+    400042: Shebot_LeftHandMiddle2
+    400044: Shebot_LeftHandMiddle3
+    400046: Shebot_LeftHandMiddle4
+    400048: Shebot_LeftHandPinky1
+    400050: Shebot_LeftHandPinky2
+    400052: Shebot_LeftHandPinky3
+    400054: Shebot_LeftHandPinky4
+    400056: Shebot_LeftHandRing1
+    400058: Shebot_LeftHandRing2
+    400060: Shebot_LeftHandRing3
+    400062: Shebot_LeftHandRing4
+    400064: Shebot_LeftHandThumb1
+    400066: Shebot_LeftHandThumb2
+    400068: Shebot_LeftHandThumb3
+    400070: Shebot_LeftHandThumb4
+    400072: Shebot_LeftLeg
+    400074: Shebot_LeftShoulder
+    400076: Shebot_LeftToe
+    400078: Shebot_LeftToeBase
+    400080: Shebot_LeftUpLeg
+    400082: Shebot_Leg_L
+    400084: Shebot_Leg_R
+    400086: //RootNode
+    400088: Shebot_Neck
+    400090: Shebot_RightArm
+    400092: Shebot_RightFoot
+    400094: Shebot_RightForeArm
+    400096: Shebot_RightHand
+    400098: Shebot_RightHandIndex1
+    400100: Shebot_RightHandIndex2
+    400102: Shebot_RightHandIndex3
+    400104: Shebot_RightHandIndex4
+    400106: Shebot_RightHandMiddle1
+    400108: Shebot_RightHandMiddle2
+    400110: Shebot_RightHandMiddle3
+    400112: Shebot_RightHandMiddle4
+    400114: Shebot_RightHandPinky1
+    400116: Shebot_RightHandPinky2
+    400118: Shebot_RightHandPinky3
+    400120: Shebot_RightHandPinky4
+    400122: Shebot_RightHandRing1
+    400124: Shebot_RightHandRing2
+    400126: Shebot_RightHandRing3
+    400128: Shebot_RightHandRing4
+    400130: Shebot_RightHandThumb1
+    400132: Shebot_RightHandThumb2
+    400134: Shebot_RightHandThumb3
+    400136: Shebot_RightHandThumb4
+    400138: Shebot_RightLeg
+    400140: Shebot_RightShoulder
+    400142: Shebot_RightToe
+    400144: Shebot_RightToeBase
+    400146: Shebot_RightUpLeg
+    400148: Shebot_Root
+    400150: Shebot_Spine
+    4300000: Shebot_Leg_L
+    4300002: Shebot_Leg_R
+    4300004: Shebot_Body
+    4300006: Shebot_Body_Attachments_NeckPipe1
+    4300008: Shebot_Body_Attachment_backWireGuide
+    4300010: Shebot_Body_Attachment
+    4300012: Shebot_Body_Attachments_Spine
+    4300014: Shebot_Attachments_ArmArmor
+    4300016: Shebot_Body_Attachments_NeckArmor
+    4300018: Shebot_Attachments_ShoulderArmor
+    9500000: //RootNode
+    13700000: Shebot_Attachments_ArmArmor
+    13700002: Shebot_Attachments_ShoulderArmor
+    13700004: Shebot_Body
+    13700006: Shebot_Body_Attachment
+    13700008: Shebot_Body_Attachment_backWireGuide
+    13700010: Shebot_Body_Attachments_NeckArmor
+    13700012: Shebot_Body_Attachments_NeckPipe1
+    13700014: Shebot_Body_Attachments_Spine
+    13700016: Shebot_Leg_L
+    13700018: Shebot_Leg_R
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: Shebot_Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_Chest
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftToe
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightToe
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHandThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHandThumb3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHandMiddle3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHandRing3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_LeftHandPinky3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHandThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHandThumb3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHandMiddle3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHandRing3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shebot_RightHandPinky3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Shebot_LOD_1(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_Attachments_ArmArmor
+      position: {x: -0, y: 0.33245862, z: 0.036292136}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_Attachments_ShoulderArmor
+      position: {x: 0.00022637378, y: 0.33245862, z: 0.041179392}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_Body
+      position: {x: -0, y: 0.33246, z: 0.036289997}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_Body_Attachment
+      position: {x: -0, y: 0.33245862, z: 0.036292136}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_Body_Attachment_backWireGuide
+      position: {x: -0, y: 0.33245862, z: 0.036292136}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_Body_Attachments_NeckArmor
+      position: {x: -0, y: 0.33245862, z: 0.036292136}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_Body_Attachments_NeckPipe1
+      position: {x: -0, y: 0.0006666447, z: 0.036292136}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_Body_Attachments_Spine
+      position: {x: -0, y: 0.33245862, z: 0.036292136}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_Leg_L
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_Leg_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_Root
+      position: {x: -4.3368086e-21, y: -0.00003072847, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_Hips
+      position: {x: 0.0011706114, y: 1.3646147, z: -0.0002240467}
+      rotation: {x: -0.4469497, y: 0.49055704, z: -0.5038077, w: 0.5529625}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_Spine
+      position: {x: -0.15459959, y: -0.0023409086, z: 0.00028220995}
+      rotation: {x: 0.9943354, y: -0.08794038, z: -0.00028352594, w: 0.05969554}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: Shebot_Chest
+      position: {x: -0.12752002, y: -0.008258934, z: 0.0000000064074985}
+      rotation: {x: -0.50293916, y: 0.16056497, z: 0.18994518, w: 0.8277632}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+      transformModified: 1
+    - name: Shebot_LeftShoulder
+      position: {x: -0.16314304, y: 0.0069580507, z: 0.016385695}
+      rotation: {x: -0.071909755, y: 0.16660568, z: 0.5914864, w: 0.7856306}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: Shebot_LeftArm
+      position: {x: -0.1171129, y: -0.0074902754, z: -0.000000021253863}
+      rotation: {x: 0.0024638763, y: 0.013087599, z: -0.124962986, w: 0.99207205}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: Shebot_LeftForeArm
+      position: {x: -0.24576539, y: 0.011553327, z: -0.000000033944843}
+      rotation: {x: 0.0018804944, y: 0.062766865, z: -0.029912427, w: 0.99757814}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: Shebot_LeftHand
+      position: {x: -0.2839403, y: -0.000000023968934, z: -0.000000036454022}
+      rotation: {x: -0.019799085, y: -0.22568135, z: 0.099202186, w: 0.9689349}
+      scale: {x: 1.0000001, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_LeftHandPinky1
+      position: {x: -0.090685114, y: -0.002098401, z: 0.003925949}
+      rotation: {x: -0.16166179, y: 0.16023406, z: 0.10341315, w: 0.96824396}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000004}
+      transformModified: 1
+    - name: Shebot_LeftHandPinky2
+      position: {x: -0.033176266, y: 0.0061594592, z: 0.0019534847}
+      rotation: {x: 0.005075996, y: 0.01653822, z: -0.093051955, w: 0.995511}
+      scale: {x: 1.0000001, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_LeftHandPinky3
+      position: {x: -0.019667119, y: -0.0010388742, z: 0.00009248177}
+      rotation: {x: -0.0022010803, y: -0.021441117, z: -0.102096565, w: 0.994541}
+      scale: {x: 1, y: 1, z: 1.0000001}
+      transformModified: 1
+    - name: Shebot_LeftHandPinky4
+      position: {x: -0.025647439, y: -0.0067610145, z: 0.001169463}
+      rotation: {x: 0, y: 0.120978676, z: -0, w: 0.9926551}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_LeftHandRing1
+      position: {x: -0.08829568, y: 0.004454457, z: 0.022267379}
+      rotation: {x: 0.043479633, y: 0.18920101, z: 0.04134445, w: 0.9801036}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_LeftHandRing2
+      position: {x: -0.03869404, y: 0.0022202132, z: 0.00019589774}
+      rotation: {x: -0.0044959653, y: -0.01573686, z: -0.0072817975, w: 0.9998396}
+      scale: {x: 1, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: Shebot_LeftHandRing3
+      position: {x: -0.025316793, y: 0.00022899901, z: -0.0000000063296004}
+      rotation: {x: 0.0015412346, y: 0.011304711, z: -0.13507716, w: 0.99076945}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: Shebot_LeftHandRing4
+      position: {x: -0.028712966, y: -0.0070760637, z: 0.00017904393}
+      rotation: {x: 0, y: 0.013884872, z: -0, w: 0.9999036}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_LeftHandMiddle1
+      position: {x: -0.07976197, y: 0.0073409854, z: 0.04352771}
+      rotation: {x: 0.060612116, y: 0.21320955, z: 0.10466533, w: 0.9694912}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+      transformModified: 1
+    - name: Shebot_LeftHandMiddle2
+      position: {x: -0.040823616, y: 0.00672259, z: -0.000027458665}
+      rotation: {x: -0.0017533923, y: -0.004540401, z: -0.12561493, w: 0.99206716}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000004}
+      transformModified: 1
+    - name: Shebot_LeftHandMiddle3
+      position: {x: -0.02734864, y: -0.0024328742, z: -0.0000071271893}
+      rotation: {x: 0.0009085755, y: 0.007944274, z: -0.11362426, w: 0.99349165}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: Shebot_LeftHandMiddle4
+      position: {x: -0.032067582, y: -0.008447493, z: 0.00078317965}
+      rotation: {x: 0, y: -0.01209412, z: -0, w: 0.99992687}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_LeftHandIndex1
+      position: {x: -0.06865443, y: 0.0012984027, z: 0.06230229}
+      rotation: {x: 0.08196685, y: 0.24655959, z: 0.11972765, w: 0.9582041}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: Shebot_LeftHandIndex2
+      position: {x: -0.040960584, y: 0.007977402, z: -0.0001561466}
+      rotation: {x: -0.0007593446, y: 0.0021603385, z: -0.13941374, w: 0.9902316}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_LeftHandIndex3
+      position: {x: -0.026067456, y: -0.0023184023, z: -0.0011258785}
+      rotation: {x: -0.0017229188, y: -0.018488022, z: -0.09277305, w: 0.99551415}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+      transformModified: 1
+    - name: Shebot_LeftHandIndex4
+      position: {x: -0.027576262, y: -0.007625496, z: 0.000230523}
+      rotation: {x: 0, y: -0.051199533, z: -0, w: 0.99868846}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_LeftHandThumb1
+      position: {x: -0.015640842, y: -0.022282762, z: 0.055297974}
+      rotation: {x: -0.075516, y: 0.5082973, z: 0.06989962, w: 0.8550118}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: Shebot_LeftHandThumb2
+      position: {x: -0.023930864, y: -0.0022210318, z: 0.0022520109}
+      rotation: {x: 0.043305933, y: 0.062223475, z: 0.08166151, w: 0.99377275}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000004}
+      transformModified: 1
+    - name: Shebot_LeftHandThumb3
+      position: {x: -0.030692572, y: 0.0024723923, z: -0.0034843746}
+      rotation: {x: -0.013094941, y: -0.030117389, z: -0.30063578, w: 0.9531734}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000004}
+      transformModified: 1
+    - name: Shebot_LeftHandThumb4
+      position: {x: -0.02559798, y: -0.017046053, z: -0.0019435564}
+      rotation: {x: 0, y: -0, z: -0.2714763, w: 0.96244514}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightShoulder
+      position: {x: -0.09282294, y: 0.12572247, z: -0.051727388}
+      rotation: {x: 0.8885392, y: 0.36946234, z: -0.21587656, w: 0.1655082}
+      scale: {x: 1.0000001, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightArm
+      position: {x: 0.1160961, y: 0.007817536, z: 0.00011791955}
+      rotation: {x: 0.0024638763, y: 0.013087599, z: -0.124962986, w: 0.99207205}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: Shebot_RightForeArm
+      position: {x: 0.24576539, y: -0.011553328, z: -0.000000008821646}
+      rotation: {x: 0.0019351167, y: 0.061721094, z: -0.028586589, w: 0.9976821}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHand
+      position: {x: 0.2839403, y: 0.00000002401708, z: -0.000000020670276}
+      rotation: {x: -0.019799085, y: -0.22568135, z: 0.099202186, w: 0.9689349}
+      scale: {x: 1, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandPinky1
+      position: {x: 0.090685114, y: 0.0020984025, z: -0.0039259666}
+      rotation: {x: -0.16203626, y: 0.15642065, z: 0.10377632, w: 0.968766}
+      scale: {x: 1.0000002, y: 1, z: 1.0000001}
+      transformModified: 1
+    - name: Shebot_RightHandPinky2
+      position: {x: 0.033176195, y: -0.0061594425, z: -0.0019534617}
+      rotation: {x: 0.005075996, y: 0.01653822, z: -0.093051955, w: 0.995511}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandPinky3
+      position: {x: 0.019667191, y: 0.001038868, z: -0.00009250519}
+      rotation: {x: 0.022885714, y: -0.16700858, z: -0.014605345, w: 0.98558164}
+      scale: {x: 1, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandPinky4
+      position: {x: 0.050536603, y: 0.0020266918, z: -0.021313397}
+      rotation: {x: 0, y: 0.120978676, z: -0, w: 0.9926551}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandThumb1
+      position: {x: 0.0167525, y: 0.021892074, z: -0.055722818}
+      rotation: {x: -0.07463563, y: 0.50560045, z: 0.06986359, w: 0.8566894}
+      scale: {x: 1.0000001, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandThumb2
+      position: {x: 0.023930926, y: 0.0022209936, z: -0.0022519843}
+      rotation: {x: 0.043305933, y: 0.062223475, z: 0.08166151, w: 0.99377275}
+      scale: {x: 1.0000005, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandThumb3
+      position: {x: 0.030692607, y: -0.0024722267, z: 0.0034843716}
+      rotation: {x: -0.03018846, y: -0.07298151, z: -0.07749072, w: 0.99386}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+      transformModified: 1
+    - name: Shebot_RightHandThumb4
+      position: {x: 0.02800273, y: 0.002668096, z: -0.0031274813}
+      rotation: {x: 0.000000012420147, y: -0.0000000035033427, z: -0.2714763, w: 0.96244514}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandIndex1
+      position: {x: 0.069510646, y: -0.000057331992, z: -0.061967015}
+      rotation: {x: 0.082179286, y: 0.24540281, z: 0.12060544, w: 0.9583728}
+      scale: {x: 1.0000001, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandIndex2
+      position: {x: 0.04096066, y: -0.0079772705, z: 0.00015613835}
+      rotation: {x: -0.0007594661, y: 0.0021605873, z: -0.13940921, w: 0.9902322}
+      scale: {x: 1.0000002, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandIndex3
+      position: {x: 0.026067436, y: 0.0023183299, z: 0.0011258777}
+      rotation: {x: -0.0017229188, y: -0.018488022, z: -0.09277305, w: 0.99551415}
+      scale: {x: 1.0000004, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandIndex4
+      position: {x: 0.027576262, y: 0.007625496, z: -0.000230523}
+      rotation: {x: 0.000000012887857, y: -0.051199533, z: 6.607188e-10, w: 0.99868846}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandMiddle1
+      position: {x: 0.08147117, y: -0.007294739, z: -0.04370514}
+      rotation: {x: 0.06096677, y: 0.2113689, z: 0.10644135, w: 0.9696786}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandMiddle2
+      position: {x: 0.040823616, y: -0.0067225895, z: 0.00002745151}
+      rotation: {x: -0.0017533341, y: -0.004540301, z: -0.1256149, w: 0.99206716}
+      scale: {x: 1.0000004, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandMiddle3
+      position: {x: 0.02734864, y: 0.0024328737, z: 0.000007125652}
+      rotation: {x: 0.0009085755, y: 0.007944274, z: -0.11362426, w: 0.99349165}
+      scale: {x: 1.0000001, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandMiddle4
+      position: {x: 0.032067582, y: 0.008447493, z: -0.00078317965}
+      rotation: {x: 0.000000018248786, y: -0.01209412, z: 2.2071915e-10, w: 0.99992687}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandRing1
+      position: {x: 0.08787286, y: -0.0058300947, z: -0.021878636}
+      rotation: {x: 0.043796033, y: 0.18759736, z: 0.04299902, w: 0.9803266}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandRing2
+      position: {x: 0.039938856, y: -0.0022382024, z: -0.0001566249}
+      rotation: {x: -0.0044959653, y: -0.01573686, z: -0.0072817975, w: 0.9998396}
+      scale: {x: 1.0000005, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: Shebot_RightHandRing3
+      position: {x: 0.026760247, y: -0.000630045, z: -0.00003419166}
+      rotation: {x: 0.0015412346, y: 0.011304711, z: -0.13507716, w: 0.99076945}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightHandRing4
+      position: {x: 0.028249413, y: 0.0070760637, z: -0.00016616748}
+      rotation: {x: 0, y: 0.013884872, z: -0, w: 0.9999036}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_Neck
+      position: {x: -0.1377887, y: 0.06812594, z: -0.026093133}
+      rotation: {x: 0.40076938, y: -0.34519237, z: 0.14896479, w: 0.8354853}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: Shebot_Head
+      position: {x: -0.017825136, y: 0.09896682, z: -0.0010287062}
+      rotation: {x: 0.8590622, y: -0.51186985, z: -0.000399453, w: 0.0010939175}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_HeadEnd
+      position: {x: -0.22648168, y: 0.023956576, z: 2.2525515e-14}
+      rotation: {x: 0.45106715, y: -0.5445534, z: 0.45106715, w: 0.5445534}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_LeftUpLeg
+      position: {x: 0.087114275, y: 0.012860184, z: -0.09109396}
+      rotation: {x: 0.016363164, y: -0.6973549, z: 0.7116899, w: 0.08322192}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+      transformModified: 1
+    - name: Shebot_LeftLeg
+      position: {x: -0.45259452, y: -0.05988529, z: 0.006446143}
+      rotation: {x: -0.5101138, y: -0.045965675, z: 0.04292042, w: 0.8578047}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+      transformModified: 1
+    - name: Shebot_LeftFoot
+      position: {x: -0.5922959, y: -0.0027864343, z: -0.0065455865}
+      rotation: {x: 0.90023345, y: 0.36005905, z: -0.08177995, w: 0.2307583}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: Shebot_LeftToe
+      position: {x: -0.21374103, y: -0.0008695872, z: 0.012559573}
+      rotation: {x: 0.019266484, y: 0.041709464, z: -0.4046054, w: 0.9133365}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: Shebot_LeftToeBase
+      position: {x: -0.10307316, y: 4.4408918e-17, z: 1.2434498e-16}
+      rotation: {x: -4.0953395e-15, y: -1.3383004e-15, z: -0.36403057, w: 0.931387}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightUpLeg
+      position: {x: 0.08903449, y: 0.03345668, z: 0.081237525}
+      rotation: {x: -0.777757, y: -0.018319674, z: -0.07290032, w: 0.6240545}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Shebot_RightLeg
+      position: {x: 0.4529192, y: 0.05757883, z: -0.006683088}
+      rotation: {x: -0.51011807, y: -0.045908008, z: 0.04296277, w: 0.85780317}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: Shebot_RightFoot
+      position: {x: 0.59229565, y: 0.0027862361, z: 0.0065456885}
+      rotation: {x: 0.9002225, y: 0.3600863, z: -0.08178373, w: 0.23075698}
+      scale: {x: 1, y: 1, z: 1.0000001}
+      transformModified: 1
+    - name: Shebot_RightToe
+      position: {x: 0.21374103, y: 0.0008695733, z: -0.012559576}
+      rotation: {x: 0.019266484, y: 0.041709464, z: -0.40460542, w: 0.9133365}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+      transformModified: 1
+    - name: Shebot_RightToeBase
+      position: {x: 0.10307316, y: 3.4638957e-16, z: -1.4210854e-16}
+      rotation: {x: 3.2785405e-15, y: 1.4941246e-15, z: -0.36403057, w: 0.931387}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

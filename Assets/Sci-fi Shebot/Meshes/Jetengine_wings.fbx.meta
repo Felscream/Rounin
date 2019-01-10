@@ -1,0 +1,140 @@
+fileFormatVersion: 2
+guid: 594740483429f5049951a4e5d0180813
+timeCreated: 1482423830
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Shebot_Jetengine_BaseWings_L
+    100004: Shebot_Jetengine_BaseWings_R
+    100006: Shebot_Jetengine_BigWings_L
+    100008: Shebot_Jetengine_BigWings_R
+    100010: Shebot_Jetengine_SmallWings_L1
+    100012: Shebot_Jetengine_SmallWings_L1 1
+    100014: Shebot_Jetengine_SmallWings_L1_Rotator
+    100016: Shebot_Jetengine_SmallWings_L2
+    100018: Shebot_Jetengine_SmallWings_L2_Rotator
+    100020: Shebot_Jetengine_SmallWings_R1
+    100022: Shebot_Jetengine_SmallWings_R1_Rotator
+    100024: Shebot_Jetengine_SmallWings_R2
+    100026: Shebot_Jetengine_SmallWings_R2_Rotator
+    100028: Shebot_Jetengine_Wings_L
+    100030: Shebot_Jetengine_Wings_R
+    400000: //RootNode
+    400002: Shebot_Jetengine_BaseWings_L
+    400004: Shebot_Jetengine_BaseWings_R
+    400006: Shebot_Jetengine_BigWings_L
+    400008: Shebot_Jetengine_BigWings_R
+    400010: Shebot_Jetengine_SmallWings_L1
+    400012: Shebot_Jetengine_SmallWings_L1 1
+    400014: Shebot_Jetengine_SmallWings_L1_Rotator
+    400016: Shebot_Jetengine_SmallWings_L2
+    400018: Shebot_Jetengine_SmallWings_L2_Rotator
+    400020: Shebot_Jetengine_SmallWings_R1
+    400022: Shebot_Jetengine_SmallWings_R1_Rotator
+    400024: Shebot_Jetengine_SmallWings_R2
+    400026: Shebot_Jetengine_SmallWings_R2_Rotator
+    400028: Shebot_Jetengine_Wings_L
+    400030: Shebot_Jetengine_Wings_R
+    2300000: Shebot_Jetengine_BaseWings_L
+    2300002: Shebot_Jetengine_BaseWings_R
+    2300004: Shebot_Jetengine_BigWings_L
+    2300006: Shebot_Jetengine_BigWings_R
+    2300008: Shebot_Jetengine_SmallWings_L1 1
+    2300010: Shebot_Jetengine_SmallWings_L1_Rotator
+    2300012: Shebot_Jetengine_SmallWings_L2
+    2300014: Shebot_Jetengine_SmallWings_L2_Rotator
+    2300016: Shebot_Jetengine_SmallWings_R1
+    2300018: Shebot_Jetengine_SmallWings_R1_Rotator
+    2300020: Shebot_Jetengine_SmallWings_R2
+    2300022: Shebot_Jetengine_SmallWings_R2_Rotator
+    3300000: Shebot_Jetengine_BaseWings_L
+    3300002: Shebot_Jetengine_BaseWings_R
+    3300004: Shebot_Jetengine_BigWings_L
+    3300006: Shebot_Jetengine_BigWings_R
+    3300008: Shebot_Jetengine_SmallWings_L1 1
+    3300010: Shebot_Jetengine_SmallWings_L1_Rotator
+    3300012: Shebot_Jetengine_SmallWings_L2
+    3300014: Shebot_Jetengine_SmallWings_L2_Rotator
+    3300016: Shebot_Jetengine_SmallWings_R1
+    3300018: Shebot_Jetengine_SmallWings_R1_Rotator
+    3300020: Shebot_Jetengine_SmallWings_R2
+    3300022: Shebot_Jetengine_SmallWings_R2_Rotator
+    4300000: Shebot_Jetengine_BigWings_R
+    4300002: Shebot_Jetengine_SmallWings_R2_Rotator
+    4300004: Shebot_Jetengine_SmallWings_R2
+    4300006: Shebot_Jetengine_SmallWings_R1_Rotator
+    4300008: Shebot_Jetengine_SmallWings_R1
+    4300010: Shebot_Jetengine_BaseWings_R
+    4300012: Shebot_Jetengine_SmallWings_L1_Rotator
+    4300014: Shebot_Jetengine_SmallWings_L1
+    4300016: Shebot_Jetengine_SmallWings_L2_Rotator
+    4300018: Shebot_Jetengine_SmallWings_L2
+    4300020: Shebot_Jetengine_BigWings_L
+    4300022: Shebot_Jetengine_BaseWings_L
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
