@@ -9,15 +9,14 @@ namespace SA
     {
         public float MovementSpeed = 2f;
         public float WalkSpeed = 1.5f;
-        public float RunThreshold = 0.6f;
         
         public override void Execute(StateManager states)
         {
             if (states.CanMoveForward && states.MovementVariables.MoveAmount > Constants.MovementThreshold)
             {
                 states.Animator.applyRootMotion = false;
-                float speed = states.MovementVariables.MoveAmount > RunThreshold ? MovementSpeed : WalkSpeed;
-                Vector3 tarVelocity = states.mTransform.forward * states.MovementVariables.MoveAmount * speed;
+                float speed = states.MovementVariables.MoveAmount > Constants.RunThreshold ? MovementSpeed : WalkSpeed;
+                Vector3 tarVelocity = states.mTransform.forward * speed;
                 if (!states.IsGrounded)
                 {
                     tarVelocity.y = states.Rigidbody.velocity.y;

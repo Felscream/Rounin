@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Vault_LeftFootIK
   m_EditorClassIdentifier: 
   IKGoal: 0
-  TargetCurve: 
+  TargetCurve: LeftFootIK
   OriginOffset: 0.2
-  FeetOffset: 0.1
+  FeetOffset: 0.2

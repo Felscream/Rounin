@@ -12,7 +12,7 @@ namespace SA
 
         public override void Execute(StateManager states)
         {
-            states.PlayerVariables.CinemachineBrain.value.m_UpdateMethod = UpdateMethod;
+            states.PlayerVariables.CinemachineBrain.m_UpdateMethod = UpdateMethod;
         }
     }
 }

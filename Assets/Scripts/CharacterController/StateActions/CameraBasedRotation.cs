@@ -18,7 +18,7 @@ namespace SA
             float h = states.MovementVariables.Horizontal;
             float v = states.MovementVariables.Vertical;
 
-            Transform camera = states.PlayerVariables.CameraTransform.value;
+            Transform camera = states.PlayerVariables.CameraTransform;
             Vector3 tarDirection = camera.forward * v;
             tarDirection += camera.right * h;
             tarDirection.Normalize();

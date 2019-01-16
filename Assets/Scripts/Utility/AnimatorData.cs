@@ -7,6 +7,8 @@ namespace SA
     {
         public Transform LeftFoot;
         public Transform RightFoot;
+        public Transform RightHand;
+        public Transform LeftHand;
         public Animator Animator;
 
         public AnimatorData(Animator anim)
@@ -14,6 +16,8 @@ namespace SA
             Animator = anim;
             LeftFoot = anim.GetBoneTransform(HumanBodyBones.LeftFoot);
             RightFoot = anim.GetBoneTransform(HumanBodyBones.RightFoot);
+            RightHand = anim.GetBoneTransform(HumanBodyBones.RightHand);
+            LeftHand = anim.GetBoneTransform(HumanBodyBones.LeftHand);
 
             AnimatorHook aHook = anim.GetComponent<AnimatorHook>();
             if (aHook == null)

@@ -23,7 +23,7 @@ namespace SA
             }
             else if(states.Target != null)
             {
-                if (Vector3.Distance(states.PlayerVariables.CameraTransform.value.transform.position, states.Target.position) > Constants.FocusLossRange 
+                if (Vector3.Distance(states.PlayerVariables.CameraTransform.transform.position, states.Target.position) > Constants.FocusLossRange 
                     || AreObstaclesOnTheWay(states, states.Target))
                 {
                     NullTarget(states);
@@ -44,8 +44,8 @@ namespace SA
 
         private void ComputeAngle(StateManager s, Transform t)
         {
-            Vector3 dir = (s.PlayerVariables.CameraTransform.value.position - t.position).normalized;
-            float angle = Vector3.Dot(s.PlayerVariables.CameraTransform.value.forward, dir);
+            Vector3 dir = (s.PlayerVariables.CameraTransform.position - t.position).normalized;
+            float angle = Vector3.Dot(s.PlayerVariables.CameraTransform.forward, dir);
             if (angle < FocusAngleRange)
             {
                 AssignTarget(s, t);
@@ -58,7 +58,7 @@ namespace SA
 
         private void FindClosestTarget(StateManager s, Collider[] targets)
         {
-            Transform camera = s.PlayerVariables.CameraTransform.value; ;
+            Transform camera = s.PlayerVariables.CameraTransform;
             Transform closest = null;
             float minDist = float.MaxValue;
             for (int i = 0; i < targets.Length; ++i)
@@ -86,7 +86,7 @@ namespace SA
 
         private void FindTarget(StateManager states)
         {
-            Transform camera = states.PlayerVariables.CameraTransform.value;
+            Transform camera = states.PlayerVariables.CameraTransform;
             Collider[] possibleTargets = Physics.OverlapSphere(camera.position, Constants.FocusRange, TargetLayer);
             if (possibleTargets.Length > 0)
             {
@@ -104,7 +104,7 @@ namespace SA
 
             if(target != null)
             {
-                Vector3 origin = s.PlayerVariables.CombatCameraTransform.value.position;
+                Vector3 origin = s.PlayerVariables.CombatCameraTransform.position;
                 Vector3 dir = (target.position + Vector3.up * RaycastYOffset) - origin;
                 Debug.DrawRay(origin, dir, Color.green);
                 RaycastHit hit;

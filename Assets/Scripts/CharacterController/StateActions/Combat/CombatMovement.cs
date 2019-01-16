@@ -13,14 +13,14 @@ namespace SA
             if (states.MovementVariables.MoveAmount > Constants.MovementThreshold)
             {
                 states.Rigidbody.drag = 0f;
-                Transform camera = states.Target != null ? states.PlayerVariables.CombatCameraTransform.value : states.PlayerVariables.CameraTransform.value;
+                Transform camera = states.Target != null ? states.PlayerVariables.CombatCameraTransform : states.PlayerVariables.CameraTransform;
                 Vector3 camForward = camera.forward.normalized;
                 camForward.y = 0f;
                 Vector3 camRight = camera.right.normalized;
                 camRight.y = 0f;
 
-                Vector2 input = new Vector2(states.MovementVariables.Horizontal, states.MovementVariables.Vertical).normalized;
-                Vector3 tarVelocity = (camForward * input.y + camRight * input.x).normalized;
+                Vector2 input = Vector2.ClampMagnitude(new Vector2(states.MovementVariables.Horizontal, states.MovementVariables.Vertical), 1f);
+                Vector3 tarVelocity = (camForward * input.y + camRight * input.x).normalized * Mathf.Lerp(0f, MovementSpeed, input.magnitude);
                 states.Rigidbody.velocity = tarVelocity;
             }
             else

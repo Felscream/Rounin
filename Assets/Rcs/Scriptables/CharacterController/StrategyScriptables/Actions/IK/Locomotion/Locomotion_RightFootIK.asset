@@ -15,4 +15,4 @@ MonoBehaviour:
   IKGoal: 1
   TargetCurve: RightFootIK
   OriginOffset: 0.2
-  FeetOffset: 0.1
+  FeetOffset: 0.2

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc4da95454509ff469c6ad2e69a584d5, type: 3}
   m_Name: CombatMovement
   m_EditorClassIdentifier: 
-  MovementSpeed: 3
+  MovementSpeed: 1.4

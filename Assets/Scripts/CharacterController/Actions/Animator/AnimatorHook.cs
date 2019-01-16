@@ -18,21 +18,21 @@ namespace SA
         public bool LookAtActivated = false;
 
         private Dictionary<AvatarIKGoal, BodyPartIK> _ikDictionary;
-
+        private bool _isUpdatingDictionnary = false;
         Animator _anim;
 
-        private void Awake()
+        private void OnEnable()
         {
             InitDictionnary();
         }
 
         private void OnAnimatorIK(int layerIndex)
         {
-            foreach(KeyValuePair<AvatarIKGoal, BodyPartIK> entry in _ikDictionary)
+            foreach (BodyPartIK entry in _ikDictionary.Values)
             {
-                if(entry.Value != null)
+                if (entry != null)
                 {
-                    entry.Value.Execute(Data);
+                    entry.Execute(Data);
                 }
             }
 
@@ -44,12 +44,21 @@ namespace SA
             }
         }
 
-        public void ChangeIKAction(AvatarIKGoal goal, BodyPartIK action)
+        public void ChangeIKAction(BodyPartIK[] actions, bool reset = false)
         {
-            if (_ikDictionary.ContainsKey(goal))
+            _isUpdatingDictionnary = true;
+            if (reset)
             {
-                _ikDictionary[goal] = action;
+                ResetDictionnary();
             }
+            for(int i = 0; i < actions.Length; ++i)
+            {
+                if (!_ikDictionary.ContainsKey(actions[i].IKGoal))
+                {
+                    _ikDictionary.Add(actions[i].IKGoal,actions[i]);
+                }
+            }
+            _isUpdatingDictionnary = false;
         }
 
         public void LookAtTarget(Vector3 target, float weight)
@@ -57,6 +66,14 @@ namespace SA
             LookAt.Weight = weight;
             LookAt.Position = target;
             LookAtActivated = true;
+        }
+
+        private void ResetDictionnary()
+        {
+            if(_ikDictionary != null)
+            {
+                _ikDictionary.Clear();
+            }
         }
 
         private void InitDictionnary()

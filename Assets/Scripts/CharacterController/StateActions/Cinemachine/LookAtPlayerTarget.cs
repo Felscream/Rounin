@@ -22,7 +22,6 @@ namespace SA
             }
             else
             {
-                states.PlayerVariables.CinemachineCamera.combat.LookAt = states.mTransform;
                 states.PlayerVariables.CinemachineCamera.combat.Priority = 10;
                 states.PlayerVariables.CinemachineCamera.value.Priority = 11;
             }

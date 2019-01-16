@@ -1,15 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 using SA;
-using SO;
 
-[CreateAssetMenu(menuName = "PlayerVariable")]
-public class PlayerVariables : ScriptableObject
+[System.Serializable]
+public class PlayerVariables 
 {
-    public CinemachineBrainVariable CinemachineBrain;
-    public CinemachineFreeLookCameraVariable CinemachineCamera;
-    public TransformVariable CameraTransform;
-    public TransformVariable CombatCameraTransform;
+    public CinemachineBrain CinemachineBrain;
+    public CinemachineCameras CinemachineCamera;
+    public Transform CameraTransform;
+    public Transform CombatCameraTransform;
     public PhysicMaterial SlideMaterial;
 }

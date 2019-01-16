@@ -16,19 +16,22 @@ namespace SA
         public override void Execute(AnimatorData data)
         {
             Transform originTransform = IKGoal == AvatarIKGoal.LeftFoot ? data.LeftFoot : data.RightFoot;
-            float weight = data.Animator.GetFloat(TargetCurve);
+            float weight = 0f;
             RaycastHit hit;
 
             Vector3 origin = originTransform.position;
             origin.y += OriginOffset;
 
             Vector3 dir = -Vector3.up;
-
             Vector3 tarPosition = origin;
+            
             if (Physics.Raycast(origin, dir, out hit, 1f, Layers.IgnoreLayersIsGrounded))
             {
                 tarPosition = hit.point + Vector3.up * FeetOffset;
+                weight = data.Animator.GetFloat(TargetCurve);
+                Debug.DrawLine(origin, tarPosition, Color.cyan);
             }
+
             data.Animator.SetIKPositionWeight(IKGoal, weight);
             data.Animator.SetIKPosition(IKGoal, tarPosition);
         }
