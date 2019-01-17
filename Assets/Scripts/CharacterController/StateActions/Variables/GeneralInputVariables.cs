@@ -9,6 +9,7 @@ namespace SA
     {
         public float LeftTrigger;
         public bool ADown;
+        public bool A;
     }
 }
 

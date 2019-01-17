@@ -8,13 +8,13 @@ namespace SA
     [CreateAssetMenu(menuName = "Actions/State Actions/Cinemachine/Recentering")]
     public class CameraRecentering : StateActions
     {
-        
+        public bool value = true;
         public override void Execute(StateManager states)
         {
-            bool value = states.MovementVariables.MoveAmount == 0f;
-
-            states.PlayerVariables.CinemachineCamera.value.m_YAxisRecentering.m_enabled = value;
+            /*states.PlayerVariables.CinemachineCamera.value.m_YAxisRecentering.m_enabled = value;
+            states.PlayerVariables.CinemachineCamera.value.m_YAxisRecentering.RecenterNow();
             states.PlayerVariables.CinemachineCamera.value.m_RecenterToTargetHeading.m_enabled = value;
+            states.PlayerVariables.CinemachineCamera.value.m_RecenterToTargetHeading.RecenterNow();*/
             
         }
     }

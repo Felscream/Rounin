@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: MoveWithDodgeMotion
   m_EditorClassIdentifier: 
   Dash: 30
-  BackDodge: 50
-  LeftDodge: 35
-  RightDodge: 35
+  BackDodge: 80
+  LeftDodge: 50
+  RightDodge: 50

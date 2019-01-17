@@ -29,6 +29,8 @@ namespace SA
         public int IsDodging = Animator.StringToHash("IsDodging");
         public int DodgeX = Animator.StringToHash("DodgeX");
         public int DodgeY = Animator.StringToHash("DodgeY");
+
+        public int IsRunning = Animator.StringToHash("IsRunning");
     }
 }
 

@@ -10,9 +10,9 @@ namespace SA
         public float TargetOffset = 1.5f;
         public override void Execute(StateManager states)
         {
-            AxisState.Recentering ast = states.PlayerVariables.CinemachineCamera.value.m_RecenterToTargetHeading;
+            /*AxisState.Recentering ast = states.PlayerVariables.CinemachineCamera.value.m_RecenterToTargetHeading;
             ast.m_enabled = true;
-            ast.RecenterNow();
+            ast.RecenterNow();*/
             if (states.Target != null)
             {
                 states.AnimatorHook.LookAtTarget(states.Target.position + Vector3.up * TargetOffset, 1f);
