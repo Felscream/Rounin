@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2c5a4080e145140a73717598668fac, type: 3}
   m_Name: CameraBasedRotation
   m_EditorClassIdentifier: 
-  CameraTransform: {fileID: 11400000, guid: 5955d53d641348e43911049cc05d33b8, type: 2}
   speed: 6
+  running: 0

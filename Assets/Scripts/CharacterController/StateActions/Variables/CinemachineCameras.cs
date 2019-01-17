@@ -10,6 +10,7 @@ namespace SA
     {
         public CinemachineFreeLook value;
         public CinemachineVirtualCamera combat;
+        public CinemachineVirtualCamera running;
         public CinemachineConfiner confiner;
     }
 }

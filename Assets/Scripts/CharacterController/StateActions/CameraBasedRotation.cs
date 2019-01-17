@@ -9,7 +9,7 @@ namespace SA
     public class CameraBasedRotation : StateActions
     {
         public float speed = 1f;
-
+        public bool running = false;
         public override void Execute(StateManager states)
         {
             if (states.PlayerVariables.CameraTransform == null)
@@ -18,7 +18,7 @@ namespace SA
             float h = states.MovementVariables.Horizontal;
             float v = states.MovementVariables.Vertical;
 
-            Transform camera = states.PlayerVariables.CameraTransform;
+            Transform camera = !running ? states.PlayerVariables.CameraTransform : states.mTransform;
             Vector3 tarDirection = camera.forward * v;
             tarDirection += camera.right * h;
             tarDirection.Normalize();

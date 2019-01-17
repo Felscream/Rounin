@@ -8,7 +8,8 @@ public class MonitorStopRunning : Condition
 {
     public override bool CheckCondition(StateManager states)
     {
-        if (!states.InputVariables.A || states.MovementVariables.MoveAmount <= Constants.MovementThreshold)
+        if (!states.InputVariables.A 
+            || states.MovementVariables.MoveAmount <= Constants.MovementThreshold)
         {
             return true;
         }

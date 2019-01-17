@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using SA;
 
-[CreateAssetMenu(menuName = "Conditions/Locomotion/MonitorRunning")]
-public class MonitorRunning : Condition
+[CreateAssetMenu(menuName = "Actions/State Actions/Locomotion/MonitorRunning")]
+public class MonitorRunning : StateActions
 {
-    public override bool CheckCondition(StateManager states)
+    public override void Execute(StateManager states)
     {
-        if (states.InputVariables.A && states.MovementVariables.MoveAmount > Constants.MovementThreshold)
+
+        if (states.InputVariables.A && states.MovementVariables.MoveAmount > Constants.MovementThreshold && states.CanMoveForward)
         {
-            return true;
+            states.IsRunning = true;
         }
-        return false;
+        else
+        {
+            states.IsRunning = false;
+        }
     }
 }

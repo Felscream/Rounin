@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac31fb2175de014dabfc9a17ef03fde, type: 3}
-  m_Name: RunningFalse
+  m_Script: {fileID: 11500000, guid: 10802c91bd888d840b1314245801ccad, type: 3}
+  m_Name: IsRunning
   m_EditorClassIdentifier: 
-  Value: 0
+  description: 
+  Value: 1
