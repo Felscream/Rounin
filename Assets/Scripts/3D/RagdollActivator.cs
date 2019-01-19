@@ -7,12 +7,21 @@ public class RagdollActivator : MonoBehaviour
 {
     public Rigidbody[] RagDollRigidBodies;
     public Collider[] RagDollColliders;
+    public Rigidbody MainRigidBody;
     private Animator _animationController;
 
     private void Awake()
     {
         _animationController = GetComponent<Animator>();
         ActivateRagDoll(false);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ActivateRagDoll(true);
+        }
     }
 
     public void ActivateRagDoll(bool value)
@@ -23,7 +32,7 @@ public class RagdollActivator : MonoBehaviour
             {
                 RagDollRigidBodies[i].isKinematic = !value;
             }
-           /* if (RagDollColliders[i] != null)
+            /*if (RagDollColliders[i] != null)
                 RagDollColliders[i].enabled = value;*/
         }
 
@@ -31,5 +40,7 @@ public class RagdollActivator : MonoBehaviour
         {
             _animationController.enabled = !value;
         }
+
+        MainRigidBody.isKinematic = value;
     }
 }

@@ -8,8 +8,11 @@ namespace SA
     public class GeneralInputVariables
     {
         public float LeftTrigger;
+        public float RightTrigger;
         public bool ADown;
         public bool A;
+        public bool RightShoulder;
+        
     }
 }
 

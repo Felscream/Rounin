@@ -31,6 +31,10 @@ namespace SA
         public int DodgeY = Animator.StringToHash("DodgeY");
 
         public int IsRunning = Animator.StringToHash("IsRunning");
+
+        public int IsAttacking = Animator.StringToHash("IsAttacking");
+        public int HeavyLeft = Animator.StringToHash("Combat.Attacks.HeavyLeft");
+        public int HeavyRight = Animator.StringToHash("Combat.Attacks.HeavyRight");
     }
 }
 

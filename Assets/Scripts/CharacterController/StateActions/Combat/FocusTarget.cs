@@ -17,11 +17,11 @@ namespace SA
 
         public override void Execute(StateManager states)
         {
-            if (states.Target == null )
+            if (states.Target == null || states.Target == states.PlayerVariables.CombatDefaultTarget)
             {
                 FindTarget(states);
             }
-            else if(states.Target != null)
+            else
             {
                 if (Vector3.Distance(states.PlayerVariables.CameraTransform.transform.position, states.Target.position) > Constants.FocusLossRange 
                     || AreObstaclesOnTheWay(states, states.Target))
@@ -34,7 +34,7 @@ namespace SA
 
         private void NullTarget(StateManager s)
         {
-            s.Target = null;
+            s.Target = s.PlayerVariables.CombatDefaultTarget;
         }
 
         private void AssignTarget(StateManager states, Transform t)

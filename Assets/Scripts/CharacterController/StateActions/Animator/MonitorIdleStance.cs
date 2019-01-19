@@ -9,13 +9,11 @@ namespace SA
     {
         public float DelayToIdle = 7f;
 
-        public float TimeToIdle = 0f;
-
         public override void Execute(StateManager states)
         {
             if(states.MovementVariables.MoveAmount > 0.1f)
             {
-                TimeToIdle = Time.time + DelayToIdle;
+                states.PlayerVariables.IdleTimer = Time.time + DelayToIdle;
                 states.Animator.SetBool(states.Hashes.StandingIdle, false);
                 states.Animator.applyRootMotion = false;
                 states.Animator.transform.localPosition = Vector3.zero;
@@ -24,7 +22,7 @@ namespace SA
             else
             {
                 
-                if (Time.time > TimeToIdle && (!states.Animator.GetBool(states.Hashes.StandingIdle) || !states.Animator.applyRootMotion ))
+                if (Time.time > states.PlayerVariables.IdleTimer && (!states.Animator.GetBool(states.Hashes.StandingIdle) || !states.Animator.applyRootMotion ))
                 {
                     states.Animator.SetFloat(states.Hashes.IdleRand, Mathf.Round(Random.Range(0f, 1f)));
                     states.Animator.SetBool(states.Hashes.StandingIdle, true);

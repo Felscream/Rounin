@@ -150,6 +150,7 @@ Material:
     - _AlphaCutoffEnable: 0
     - _AlphaCutoffPostpass: 0.5
     - _AlphaCutoffPrepass: 0.5
+    - _AlphaCutoffShadow: 0.5
     - _Anisotropy: 0
     - _BlendMode: 0
     - _BumpScale: 1
@@ -263,8 +264,8 @@ Material:
     - _ZTestModeDistortion: 4
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.9044118, g: 0.9044118, b: 0.9044118, a: 1}
-    - _Color: {r: 0.9044118, g: 0.9044118, b: 0.9044118, a: 1}
+    - _BaseColor: {r: 0, g: 0.7911873, b: 1, a: 1}
+    - _Color: {r: 0, g: 0.7911873, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}

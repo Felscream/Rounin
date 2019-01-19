@@ -10,7 +10,7 @@ namespace SA
         public float RotationSpeed = 2f;
         public override void Execute(StateManager states)
         {
-            if (states.Target != null)
+            if (states.Target != null && states.Target != states.PlayerVariables.CombatDefaultTarget)
             {
                 float step = RotationSpeed * states.delta;
                 Vector3 dirToTarget = states.Target.position - states.mTransform.position;

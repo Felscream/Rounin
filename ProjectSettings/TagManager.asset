@@ -18,9 +18,9 @@ TagManager:
   - Environment
   - Vault
   - SelfCollision
-  - 
-  - 
-  - 
+  - P1Camera
+  - P2Camera
+  - CharacterCollider
   - 
   - 
   - 

@@ -44,7 +44,6 @@ namespace SA
             states.Rigidbody.drag = 0f;
             Vector3 v = states.Rigidbody.velocity;
             Vector3 tarVelocity = states.Animator.deltaPosition;
-            Debug.Log(tarVelocity);
             tarVelocity *= multiplier;
             tarVelocity.y = v.y;
             states.Rigidbody.velocity = tarVelocity;

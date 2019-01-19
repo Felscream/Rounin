@@ -23,12 +23,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ab872e65b6e4b2c4d90c38bf7c02078d, type: 2}
   - {fileID: 11400000, guid: 6dce315c4ff09f84f83a88dee4db015f, type: 2}
   - {fileID: 11400000, guid: 9dd9af1e96a0dc14998118988555dcb2, type: 2}
+  - {fileID: 11400000, guid: ef68ccdf9d7611d4f834a6926bb3eec9, type: 2}
   onEnter:
-  - {fileID: 11400000, guid: 180d769d345de6d40aab7e7f9a2355cc, type: 2}
   - {fileID: 11400000, guid: 2c9b277cbab718b46905760e09866708, type: 2}
+  - {fileID: 11400000, guid: 38e987aceef3114479a4ca763641f53e, type: 2}
   onExit:
-  - {fileID: 11400000, guid: 6ecb3289bf5a00943a9b29ed45499cd2, type: 2}
   - {fileID: 11400000, guid: 2048742cda01f4e49b42a2dda1b332c8, type: 2}
+  - {fileID: 11400000, guid: d5461834cecc25a4cb8bfc1e1029c593, type: 2}
+  - {fileID: 11400000, guid: 38e987aceef3114479a4ca763641f53e, type: 2}
   idCount: 2
   transitions:
   - id: 0

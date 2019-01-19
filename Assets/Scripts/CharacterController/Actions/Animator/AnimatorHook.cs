@@ -40,7 +40,6 @@ namespace SA
             {
                 Data.Animator.SetLookAtWeight(LookAt.Weight);
                 Data.Animator.SetLookAtPosition(LookAt.Position);
-
             }
         }
 
