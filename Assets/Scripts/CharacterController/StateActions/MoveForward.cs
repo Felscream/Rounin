@@ -25,11 +25,13 @@ namespace SA
                 {
                     tarVelocity.y = 0f;
                 }
+                states.Rigidbody.drag = 0f;
                 states.Rigidbody.velocity = tarVelocity;
+                
             }
             else
             {
-                states.Rigidbody.drag = 8f;
+                states.Rigidbody.drag = 1000f;
             }
         }
     }

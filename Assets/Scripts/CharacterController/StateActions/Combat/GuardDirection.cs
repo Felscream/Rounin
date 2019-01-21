@@ -30,23 +30,23 @@ namespace SA
 
                 if(dir != Vector2.zero)
                 {
-                    states.PlayerVariables.GuardTimer = 0f;
-                    states.PlayerVariables.GuardDirection = dir;
+                    states.GuardVariables.GuardTimer = 0f;
+                    states.GuardVariables.GuardDirection = dir;
                 }
                 else
                 {
-                    states.PlayerVariables.GuardTimer = Mathf.Clamp(states.PlayerVariables.GuardTimer + states.delta, 0f, Constants.ResetGuardTime);
+                    states.GuardVariables.GuardTimer = Mathf.Clamp(states.GuardVariables.GuardTimer + states.delta, 0f, Constants.ResetGuardTime);
                 }
                 
             }
             else
             {
-                states.PlayerVariables.GuardTimer = Mathf.Clamp(states.PlayerVariables.GuardTimer + states.delta, 0f, Constants.ResetGuardTime);
+                states.GuardVariables.GuardTimer = Mathf.Clamp(states.GuardVariables.GuardTimer + states.delta, 0f, Constants.ResetGuardTime);
             }
 
-            if (states.PlayerVariables.GuardTimer >= Constants.ResetGuardTime)
+            if (states.GuardVariables.GuardTimer >= Constants.ResetGuardTime)
             {
-                states.PlayerVariables.GuardDirection = Vector2.zero;
+                states.GuardVariables.GuardDirection = Vector2.zero;
             }
         }
     }

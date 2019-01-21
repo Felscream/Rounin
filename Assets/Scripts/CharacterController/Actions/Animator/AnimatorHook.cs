@@ -17,9 +17,13 @@ namespace SA
         public IKLookAtTarget LookAt = new IKLookAtTarget();
         public bool LookAtActivated = false;
 
+        [Header("IK")]
+        public bool HandsOnWeaponActivated = false;
+        public Transform RightHandIKTarget;
+        public Transform LeftHandIKTarget;
+
         private Dictionary<AvatarIKGoal, BodyPartIK> _ikDictionary;
         private bool _isUpdatingDictionnary = false;
-        Animator _anim;
 
         private void OnEnable()
         {
@@ -28,6 +32,8 @@ namespace SA
 
         private void OnAnimatorIK(int layerIndex)
         {
+            HandsOnWeaponIK();
+
             foreach (BodyPartIK entry in _ikDictionary.Values)
             {
                 if (entry != null)
@@ -67,6 +73,16 @@ namespace SA
             LookAtActivated = true;
         }
 
+        public void ActivateHandsOnSword()
+        {
+            HandsOnWeaponActivated = true;
+        }
+
+        public void DeactivateHandsOnSword()
+        {
+            HandsOnWeaponActivated = false;
+        }
+
         private void ResetDictionnary()
         {
             if(_ikDictionary != null)
@@ -82,6 +98,29 @@ namespace SA
             for (int i = 0; i < enumValues.Length; ++i)
             {
                 _ikDictionary.Add(enumValues[i], null);
+            }
+        }
+
+        private void HandsOnWeaponIK()
+        {
+            if (HandsOnWeaponActivated)
+            {
+                Data.Animator.SetIKPositionWeight(AvatarIKGoal.RightHand, 1f);
+                Data.Animator.SetIKRotationWeight(AvatarIKGoal.RightHand, 1f);
+                Data.Animator.SetIKPosition(AvatarIKGoal.RightHand, RightHandIKTarget.position);
+                Data.Animator.SetIKRotation(AvatarIKGoal.RightHand, RightHandIKTarget.rotation);
+
+                Data.Animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1f);
+                Data.Animator.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1f);
+                Data.Animator.SetIKPosition(AvatarIKGoal.LeftHand, LeftHandIKTarget.position);
+                Data.Animator.SetIKRotation(AvatarIKGoal.LeftHand, LeftHandIKTarget.rotation);
+            }
+            else
+            {
+                Data.Animator.SetIKPositionWeight(AvatarIKGoal.RightHand, 0f);
+                Data.Animator.SetIKRotationWeight(AvatarIKGoal.RightHand, 0f);
+                Data.Animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 0f);
+                Data.Animator.SetIKRotationWeight(AvatarIKGoal.LeftHand, 0f);
             }
         }
     }

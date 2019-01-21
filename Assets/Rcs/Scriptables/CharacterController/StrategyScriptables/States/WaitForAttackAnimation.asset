@@ -15,9 +15,11 @@ MonoBehaviour:
   onFixed:
   - {fileID: 11400000, guid: 882a8a9846be29d419f3fd56d2a7e4e3, type: 2}
   - {fileID: 11400000, guid: ab59ba2958760944f93e616c5e4a59a9, type: 2}
+  - {fileID: 11400000, guid: bac811141624eab4588aa2fb17257b74, type: 2}
   onUpdate:
   - {fileID: 11400000, guid: ab59ba2958760944f93e616c5e4a59a9, type: 2}
   - {fileID: 11400000, guid: ae243ab85cd41744faa0dbd062d65f42, type: 2}
+  - {fileID: 11400000, guid: ba5ed5980f0073c4d9804763b92de196, type: 2}
   onEnter:
   - {fileID: 11400000, guid: b15640f1a22bf7743870d9c6b92c6762, type: 2}
   - {fileID: 11400000, guid: 85bbdfaf37606694bb0114b60301ca40, type: 2}

@@ -8,5 +8,6 @@ public static class Constants
     public static float FocusRange = 8f;
     public static float FocusLossRange = 10f;
     public static float ResetGuardTime = 3f;
+    public static float TimeToMoveGuard = .25f;
     public static Vector2 LookAtAngle = new Vector2(0.3f, 0.6f);
 }

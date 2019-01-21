@@ -16,6 +16,7 @@ namespace SA
         public Animator Animator;
         public AnimatorHook AnimatorHook;
         public PlayerVariables PlayerVariables;
+        public GuardVariables GuardVariables;
         public VaultData VaultData;
         [HideInInspector] public float delta;
         [HideInInspector] public Transform mTransform;

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8e70d8920e9c94d877d88921d994de, type: 3}
   m_Name: MoveWithAttackMotion
   m_EditorClassIdentifier: 
-  HeavyLeft: 20
+  HeavyLeft: 30
   HeavyRight: 30

@@ -13,7 +13,7 @@ namespace SA
         public override void Execute(StateManager states)
         {
             float multiplier = 1f;
-            Vector2 dir = states.PlayerVariables.GuardDirection;
+            Vector2 dir = states.GuardVariables.GuardDirection;
 
             if(dir.x == 1f)
             {

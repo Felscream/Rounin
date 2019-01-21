@@ -42,12 +42,28 @@ public class PlayerInput : ScriptableObject
     private void GeneralControls()
     {
         PlayerStates.Value.InputVariables.LeftTrigger = Controller.GetTrigger_L();
-        PlayerStates.Value.InputVariables.RightTrigger = Controller.GetTrigger_R();
+        if (PlayerStates.Value.InputVariables.RighTriggerReleased)
+        {
+            PlayerStates.Value.InputVariables.RightTrigger = Controller.GetTrigger_R();
+        }
+        else
+        {
+            PlayerStates.Value.InputVariables.RightTrigger = 0f;
+            if (Controller.GetTrigger_R() == 0f)
+            {
+                PlayerStates.Value.InputVariables.RighTriggerReleased = true;
+            }
+        }
+            
 
         PlayerStates.Value.InputVariables.ADown = Controller.GetButtonDown(InputConstants.A);
         PlayerStates.Value.InputVariables.A = Controller.GetButton(InputConstants.A);
 
-        PlayerStates.Value.InputVariables.RightShoulder = Controller.GetButtonDown(InputConstants.RB);
+        
+            PlayerStates.Value.InputVariables.RightShoulder = Controller.GetButtonDown(InputConstants.RB);
+        
+
+
     }
 }
 

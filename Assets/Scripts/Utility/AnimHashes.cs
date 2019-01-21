@@ -32,9 +32,14 @@ namespace SA
 
         public int IsRunning = Animator.StringToHash("IsRunning");
 
+        public int RightStance = Animator.StringToHash("GuardStance.RightStance");
+        public int GuardY = Animator.StringToHash("GuardY");
+        public int GuardOn = Animator.StringToHash("GuardOn");
+
         public int IsAttacking = Animator.StringToHash("IsAttacking");
         public int HeavyLeft = Animator.StringToHash("Combat.Attacks.HeavyLeft");
         public int HeavyRight = Animator.StringToHash("Combat.Attacks.HeavyRight");
+
     }
 }
 

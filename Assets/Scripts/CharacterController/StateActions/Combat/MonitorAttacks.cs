@@ -11,18 +11,20 @@ namespace SA
         {
             if(states.InputVariables.RightTrigger > Constants.CombatThreshold)
             {
-                if(states.PlayerVariables.GuardDirection.x == 1f)
+                if(states.GuardVariables.GuardDirection.x == 1f)
                 {
                     states.Animator.CrossFade(states.Hashes.HeavyRight, .2f);
                     states.PlayerVariables.IsAttackingHeavy = true;
                     states.Animator.SetBool(states.Hashes.IsAttacking, true);
                 }
-                else if(states.PlayerVariables.GuardDirection.x == -1f)
+                else if(states.GuardVariables.GuardDirection.x == -1f)
                 {
                     states.Animator.CrossFade(states.Hashes.HeavyLeft, .2f);
                     states.PlayerVariables.IsAttackingHeavy = true;
                     states.Animator.SetBool(states.Hashes.IsAttacking, true);
                 }
+
+                states.InputVariables.RighTriggerReleased = false;
             }
         }
     }
