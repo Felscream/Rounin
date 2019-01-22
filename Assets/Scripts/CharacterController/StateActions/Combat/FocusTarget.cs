@@ -19,7 +19,23 @@ namespace SA
         {
             if (states.Target == null || states.Target == states.PlayerVariables.CombatDefaultTarget)
             {
-                FindTarget(states);
+                Collider[] possibleTargets = FindTarget(states);
+                if(possibleTargets.Length > 0)
+                {
+                    Transform closest = FindClosestTarget(states, possibleTargets);
+                    if (TargetIsInLineOfSight(states, closest))
+                    {
+                        AssignTarget(states, closest);
+                    }
+                    else
+                    {
+                        NullTarget(states);
+                    }
+                }
+                else
+                {
+                    NullTarget(states);
+                }
             }
             else
             {
@@ -42,21 +58,21 @@ namespace SA
             states.Target = t;
         }
 
-        private void ComputeAngle(StateManager s, Transform t)
+        private bool TargetIsInLineOfSight(StateManager s, Transform t)
         {
             Vector3 dir = (s.PlayerVariables.CameraTransform.position - t.position).normalized;
             float angle = Vector3.Dot(s.PlayerVariables.CameraTransform.forward, dir);
-            if (angle < FocusAngleRange)
+            if (angle < FocusAngleRange && !AreObstaclesOnTheWay(s, t))
             {
-                AssignTarget(s, t);
+                return true;
             }
             else
             {
-                NullTarget(s);
+                return false;
             }
         }
 
-        private void FindClosestTarget(StateManager s, Collider[] targets)
+        private Transform FindClosestTarget(StateManager s, Collider[] targets)
         {
             Transform camera = s.PlayerVariables.CameraTransform;
             Transform closest = null;
@@ -73,29 +89,14 @@ namespace SA
                     }
                 }
             }
-
-            if (closest != null && !AreObstaclesOnTheWay(s, closest))
-            {
-                ComputeAngle(s, closest);
-            }
-            else
-            {
-                NullTarget(s);
-            }
+            return closest;
         }
 
-        private void FindTarget(StateManager states)
+        private Collider[] FindTarget(StateManager states)
         {
             Transform camera = states.PlayerVariables.CameraTransform;
             Collider[] possibleTargets = Physics.OverlapSphere(camera.position, Constants.FocusRange, TargetLayer);
-            if (possibleTargets.Length > 0)
-            {
-                FindClosestTarget(states, possibleTargets);
-            }
-            else
-            {
-                NullTarget(states);
-            }
+            return possibleTargets;
         }
 
         private bool AreObstaclesOnTheWay(StateManager s, Transform target)
