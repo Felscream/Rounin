@@ -9,7 +9,7 @@ namespace SA
     {
         public float LeftTrigger;
         public float RightTrigger;
-        public bool RighTriggerReleased = true;
+        public bool RightTriggerReleased = true;
         public bool ADown;
         public bool A;
         public bool RightShoulder;

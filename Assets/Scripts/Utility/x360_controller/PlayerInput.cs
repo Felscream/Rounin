@@ -42,7 +42,7 @@ public class PlayerInput : ScriptableObject
     private void GeneralControls()
     {
         PlayerStates.Value.InputVariables.LeftTrigger = Controller.GetTrigger_L();
-        if (PlayerStates.Value.InputVariables.RighTriggerReleased)
+        if (PlayerStates.Value.InputVariables.RightTriggerReleased)
         {
             PlayerStates.Value.InputVariables.RightTrigger = Controller.GetTrigger_R();
         }
@@ -51,7 +51,7 @@ public class PlayerInput : ScriptableObject
             PlayerStates.Value.InputVariables.RightTrigger = 0f;
             if (Controller.GetTrigger_R() == 0f)
             {
-                PlayerStates.Value.InputVariables.RighTriggerReleased = true;
+                PlayerStates.Value.InputVariables.RightTriggerReleased = true;
             }
         }
             

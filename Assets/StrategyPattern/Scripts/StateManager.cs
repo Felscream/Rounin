@@ -15,6 +15,7 @@ namespace SA
         
         public Animator Animator;
         public AnimatorHook AnimatorHook;
+        public Combo ComboManager;
         public PlayerVariables PlayerVariables;
         public GuardVariables GuardVariables;
         public VaultData VaultData;
@@ -59,6 +60,7 @@ namespace SA
             {
                 AnimatorHook = GetComponentInChildren<AnimatorHook>();
             }
+            
         }
 
         private void Start()

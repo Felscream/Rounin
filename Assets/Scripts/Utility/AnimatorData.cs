@@ -20,9 +20,15 @@ namespace SA
             LeftHand = anim.GetBoneTransform(HumanBodyBones.LeftHand);
 
             AnimatorHook aHook = anim.GetComponent<AnimatorHook>();
+            Combo c = anim.GetComponent<Combo>();
             if (aHook == null)
                 aHook = aHook.gameObject.AddComponent<AnimatorHook>();
+            if(c == null)
+            {
+                c = c.gameObject.AddComponent<Combo>();
+            }
             aHook.Data = this;
+            c.SetAnimator(this);
         }
     }
 }

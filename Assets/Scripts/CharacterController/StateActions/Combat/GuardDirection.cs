@@ -12,7 +12,7 @@ namespace SA
             if(states.CameraVariables.Horizontal != 0f || states.CameraVariables.Vertical > 0f)
             {
                 Vector2 dir = Vector2.zero;
-                if (Mathf.Abs(states.CameraVariables.Horizontal) > states.CameraVariables.Vertical)
+                if (Mathf.Abs(states.CameraVariables.Horizontal) > states.CameraVariables.Vertical || states.CameraVariables.Vertical < 0f)
                 {
                     if (states.CameraVariables.Horizontal > 0f)
                     {

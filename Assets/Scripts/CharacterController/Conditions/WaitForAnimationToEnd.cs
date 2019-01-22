@@ -8,7 +8,7 @@ namespace SA
     {
         public string TargetBool = "IsInteracting";
 
-        public override bool CheckCondition(StateManager state)
+        public override bool CheckCondition(StateManager     state)
         {
             bool value = !state.Animator.GetBool(TargetBool);
             return value;

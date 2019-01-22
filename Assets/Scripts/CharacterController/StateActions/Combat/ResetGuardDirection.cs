@@ -10,7 +10,7 @@ namespace SA
         public override void Execute(StateManager states)
         {
             states.GuardVariables.GuardTimer = 0f;
-            if(!states.Animator.GetBool(states.Hashes.IsAttacking))
+            if(!states.Animator.GetBool(states.Hashes.IsAttackingHeavy) && !states.Animator.GetBool(states.Hashes.IsAttackingLight))
                 states.GuardVariables.GuardDirection = Vector2.zero;
         }
     }
