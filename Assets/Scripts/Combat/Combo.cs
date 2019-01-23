@@ -17,12 +17,16 @@ public struct ComboAttack
 
 public class Combo : MonoBehaviour
 {
+    public delegate void AttackGetterCallback();
+    public event AttackGetterCallback OnGetNextAttack = null;
+
     public bool CanCombo = true;
     public int MaxComboSize = 2;
+    public static readonly ComboAttack Empty = new ComboAttack();
 
     private Queue<ComboAttack> _comboQueue = new Queue<ComboAttack>();
     private AnimatorData _animData;
-    private static readonly ComboAttack Empty = new ComboAttack();
+    
 
     private int _attackCounter = 0;
 
@@ -54,6 +58,10 @@ public class Combo : MonoBehaviour
     {
         if(_comboQueue.Count > 0)
         {
+            if(OnGetNextAttack != null)
+            {
+                OnGetNextAttack();
+            }
             return _comboQueue.Dequeue();
         }
         return Empty;

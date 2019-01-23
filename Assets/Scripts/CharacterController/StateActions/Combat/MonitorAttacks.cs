@@ -9,7 +9,7 @@ namespace SA
     {
         public override void Execute(StateManager states)
         {
-            if(states.GuardVariables.GuardDirection != Vector2.zero)
+            if(states.GuardVariables.GuardDirection != Vector2.zero && !states.Animator.GetBool(states.Hashes.IsInteracting))
             {
                 
                 if (states.InputVariables.RightTrigger > Constants.CombatThreshold && states.InputVariables.RightTriggerReleased)

@@ -7,10 +7,9 @@ namespace SA
 {
     [RequireComponent(typeof(Collider))]
     [RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(HealthManager))]
     public class StateManager : MonoBehaviour
     {
-        public float health;
-        
         public State currentState;
         
         public Animator Animator;
@@ -19,6 +18,7 @@ namespace SA
         public PlayerVariables PlayerVariables;
         public GuardVariables GuardVariables;
         public VaultData VaultData;
+        public SwordAttack Sword;
         [HideInInspector] public float delta;
         [HideInInspector] public Transform mTransform;
         [HideInInspector] public Rigidbody Rigidbody;
@@ -41,7 +41,12 @@ namespace SA
 
         public bool CanMoveForward { get; set; }
         public bool IsBetweenObstacles { get; set; }
+        public bool AttackInitialized { get; set; }
         public bool WeaponEquipped { get; set; }
+        public bool IsDamaged { get; set; }
+        public ComboAttack CurrentAttack { get; set; }
+        public HealthManager HealthManager { get; private set; }
+        public AttackSourceData AttackReceivedData { get; private set; }
         public Transform Target;
 
         private void OnDrawGizmosSelected()
@@ -60,7 +65,10 @@ namespace SA
             {
                 AnimatorHook = GetComponentInChildren<AnimatorHook>();
             }
-            
+            HealthManager = GetComponent<HealthManager>();
+
+            ComboManager.OnGetNextAttack += Sword.ClearDamagedList;
+            HealthManager.OnHealthReduction += OnHealthReduction;
         }
 
         private void Start()
@@ -95,6 +103,18 @@ namespace SA
             {
                 currentState.Tick(this);
             }
+        }
+
+        private void OnDisable()
+        {
+            ComboManager.OnGetNextAttack -= Sword.ClearDamagedList;
+            HealthManager.OnHealthReduction -= OnHealthReduction;
+        }
+
+        private void OnHealthReduction(AttackSourceData attackData)
+        {
+            AttackReceivedData = attackData;
+            IsDamaged = true;
         }
     }
 }

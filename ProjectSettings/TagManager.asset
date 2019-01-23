@@ -21,8 +21,8 @@ TagManager:
   - P1Camera
   - P2Camera
   - CharacterCollider
-  - 
-  - 
+  - Hurtbox
+  - HitBox
   - 
   - 
   - 

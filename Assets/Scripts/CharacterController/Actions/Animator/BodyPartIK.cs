@@ -25,7 +25,7 @@ namespace SA
             Vector3 dir = -Vector3.up;
             Vector3 tarPosition = origin;
             
-            if (Physics.Raycast(origin, dir, out hit, 1f, Layers.IgnoreLayersIsGrounded))
+            if (Physics.Raycast(origin, dir, out hit, 1f, Layers.GroundLayers))
             {
                 tarPosition = hit.point + Vector3.up * FeetOffset;
                 weight = data.Animator.GetFloat(TargetCurve);

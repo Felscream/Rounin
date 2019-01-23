@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeavyLeft: 30
   HeavyRight: 30
+  HeavyUp: 30
+  LightUp: 80

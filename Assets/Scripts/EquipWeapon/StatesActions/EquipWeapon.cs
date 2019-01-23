@@ -28,6 +28,7 @@ namespace SA
 
         public void UnequipWeapon()
         {
+            
             Weapon.parent = Holster;
             Weapon.localPosition = HolsterPosition;
             Weapon.localRotation = Quaternion.Euler(HolsterRotation);

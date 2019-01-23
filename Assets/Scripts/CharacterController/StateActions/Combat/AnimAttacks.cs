@@ -9,7 +9,7 @@ namespace SA
     {
         public override void Execute(StateManager states)
         {
-            ComboAttack attack = states.ComboManager.GetNextAttack();
+            ComboAttack attack = states.CurrentAttack;
             if(attack.Direction != Vector2.zero)
             {
                 states.AnimatorHook.HandsOnWeaponActivated = false;
@@ -31,18 +31,21 @@ namespace SA
                 states.Animator.CrossFade(states.Hashes.HeavyRight, .2f);
                 states.PlayerVariables.IsAttackingHeavy = true;
                 states.Animator.SetBool(states.Hashes.IsAttackingHeavy, true);
+                states.AttackInitialized = false;
             }
             else if (attack.Direction.x == -1f)
             {
                 states.Animator.CrossFade(states.Hashes.HeavyLeft, .2f);
                 states.PlayerVariables.IsAttackingHeavy = true;
                 states.Animator.SetBool(states.Hashes.IsAttackingHeavy, true);
+                states.AttackInitialized = false;
             }
             else if (attack.Direction.y == 1f)
             {
                 states.Animator.CrossFade(states.Hashes.HeavyUp, .2f);
                 states.PlayerVariables.IsAttackingHeavy = true;
                 states.Animator.SetBool(states.Hashes.IsAttackingHeavy, true);
+                states.AttackInitialized = false;
             }
         }
 
@@ -53,19 +56,15 @@ namespace SA
                 states.Animator.CrossFade(states.Hashes.LightRight, .2f);
                 states.PlayerVariables.IsAttackingHeavy = false;
                 states.Animator.SetBool(states.Hashes.IsAttackingLight, true);
+                states.AttackInitialized = false;
             }
             else if (attack.Direction.x == -1f)
             {
                 states.Animator.CrossFade(states.Hashes.LightLeft, .2f);
                 states.PlayerVariables.IsAttackingHeavy = false;
                 states.Animator.SetBool(states.Hashes.IsAttackingLight, true);
+                states.AttackInitialized = false;
             }
-            /*else if (states.GuardVariables.GuardDirection.y == 1f)
-            {
-                states.Animator.CrossFade(states.Hashes.HeavyUp, .2f);
-                states.PlayerVariables.IsAttackingHeavy = false;
-                states.Animator.SetBool(states.Hashes.IsAttacking, true);
-            }*/
         }
     }
 }

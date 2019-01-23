@@ -7,7 +7,6 @@ namespace SA
     [CreateAssetMenu(menuName ="Actions/State Actions/IsGrounded")]
     public class IsGrounded : StateActions
     {
-
         public float GroundedDistance = 1.4f;
         public float InAirDistance = 1f;
         public override void Execute(StateManager states)
@@ -18,7 +17,7 @@ namespace SA
 
             RaycastHit hit;
             Debug.DrawRay(origin, -Vector3.up * d);
-            if(Physics.SphereCast(origin, 0.25f, -Vector3.up , out hit, d, Layers.IgnoreLayersIsGrounded))
+            if(Physics.SphereCast(origin, 0.25f, -Vector3.up , out hit, d, Layers.GroundLayers))
             {
                 states.IsGrounded = true;
                 Vector3 targetPosition = states.mTransform.position;

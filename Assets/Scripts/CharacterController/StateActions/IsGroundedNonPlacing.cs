@@ -18,7 +18,7 @@ namespace SA
 
             RaycastHit hit;
             
-            if (Physics.SphereCast(origin, 0.25f, -Vector3.up, out hit, d, Layers.IgnoreLayersIsGrounded))
+            if (Physics.SphereCast(origin, 0.25f, -Vector3.up, out hit, d, Layers.GroundLayers))
             {
                 states.IsGrounded = true;
             }

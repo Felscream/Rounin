@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace SA
 {
+    [CreateAssetMenu(menuName = "Actions/State Actions/ToggleHandIK")]
     public class ToggleHandIK : StateActions
     {
         public bool Activate;

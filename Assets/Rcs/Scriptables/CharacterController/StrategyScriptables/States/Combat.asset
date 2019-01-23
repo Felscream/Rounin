@@ -27,13 +27,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 22a3dcb055b93a3448af1b65cae19c26, type: 2}
   - {fileID: 11400000, guid: d252b40af6123ff489e73f9fb331a9fb, type: 2}
   - {fileID: 11400000, guid: ad7feb27ec35171428f42d85b3816c70, type: 2}
+  - {fileID: 11400000, guid: e8fae4d11f8855e47acb6db9fb8c6ebf, type: 2}
   - {fileID: 11400000, guid: 7306d53ba4d87b04c8bebac39f505d19, type: 2}
+  - {fileID: 11400000, guid: 366d8dd4d5499cd4886f318df2ba6b80, type: 2}
   onEnter:
   - {fileID: 11400000, guid: 9e57e9c4f5032324597c64f601a2386d, type: 2}
   - {fileID: 11400000, guid: 7aa1219c80ddf9541a13d2434151f88e, type: 2}
   - {fileID: 11400000, guid: ef68ccdf9d7611d4f834a6926bb3eec9, type: 2}
   - {fileID: 11400000, guid: 4dc8a9c7595e191478422a9768164362, type: 2}
   - {fileID: 11400000, guid: 11a823f7d23982243b36a8f6ad429196, type: 2}
+  - {fileID: 11400000, guid: c5471c67133df4041a6f0e1a95d590e1, type: 2}
   onExit:
   - {fileID: 11400000, guid: 6f35c144d56de3b4f9c446e46ea436f1, type: 2}
   - {fileID: 11400000, guid: d5461834cecc25a4cb8bfc1e1029c593, type: 2}
