@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09f12a9b8fb5e44eb81fa499afbecc4, type: 3}
+  m_Name: IsDamaged
+  m_EditorClassIdentifier: 
+  onFixed:
+  - {fileID: 11400000, guid: ab59ba2958760944f93e616c5e4a59a9, type: 2}
+  - {fileID: 11400000, guid: f59525fa2c02b0c4281167914cb2b5e5, type: 2}
+  onUpdate:
+  - {fileID: 11400000, guid: ab59ba2958760944f93e616c5e4a59a9, type: 2}
+  - {fileID: 11400000, guid: ae243ab85cd41744faa0dbd062d65f42, type: 2}
+  onEnter:
+  - {fileID: 11400000, guid: b15640f1a22bf7743870d9c6b92c6762, type: 2}
+  - {fileID: 11400000, guid: b8266f0648f65c849abfbada00b726fd, type: 2}
+  onExit:
+  - {fileID: 11400000, guid: 3e61593bd8f169240bf7867676303a3c, type: 2}
+  - {fileID: 11400000, guid: d1cf53b82e277234c9c2da90dbf4592d, type: 2}
+  idCount: 2
+  transitions:
+  - id: 0
+    condition: {fileID: 11400000, guid: 80cf303d8a27b3f4e9c5a55c4882b094, type: 2}
+    targetState: {fileID: 11400000, guid: 721621ced8afc0940a77ff3d1ffaf8ea, type: 2}
+    disable: 0
+  - id: 1
+    condition: {fileID: 11400000, guid: d8197b83db5f3994199838a8125a9581, type: 2}
+    targetState: {fileID: 11400000, guid: 1b4bb8b54d150794aa0472bb1d8b9140, type: 2}
+    disable: 0

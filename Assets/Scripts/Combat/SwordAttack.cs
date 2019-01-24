@@ -74,6 +74,16 @@ public class SwordAttack : MonoBehaviour
     private AttackSourceData BuildAttackData(Transform victimTransform)
     {
         DamageSourceRelativePosition pos = DamagedHandler.GetAttackerRelative2DPosition(Origin.mTransform, victimTransform);
-        return new AttackSourceData(Origin, AttackData.Damage, AttackData.IsHeavy, DamageSourceType.Sword, pos);
+        AttackDirection dir = AttackDirection.Up;
+        if(AttackData.Direction.x == 1f)
+        {
+            dir = AttackDirection.Right;
+        }
+        else if(AttackData.Direction.x == -1f)
+        {
+            dir = AttackDirection.Left;
+        }
+
+        return new AttackSourceData(Origin, AttackData.Damage, AttackData.IsHeavy, dir, DamageSourceType.Sword, pos);
     }
 }

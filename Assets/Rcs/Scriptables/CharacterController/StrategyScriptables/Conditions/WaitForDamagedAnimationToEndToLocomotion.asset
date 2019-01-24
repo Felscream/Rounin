@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66dc4acbf70d672478918c999288c343, type: 3}
-  m_Name: MoveWithDodgeMotion
+  m_Script: {fileID: 11500000, guid: cb3f2e79a0c740c44b35eae4ac9f3b7f, type: 3}
+  m_Name: WaitForDamagedAnimationToEndToLocomotion
   m_EditorClassIdentifier: 
-  Dash: 25
-  BackDodge: 60
-  LeftDodge: 40
-  RightDodge: 40
+  description: 
+  ToCombat: 0

@@ -8,14 +8,16 @@ public struct AttackSourceData
     public StateManager Attacker;
     public float Damage;
     public bool Critical;
+    public AttackDirection Direction;
     public DamageSourceType AttackType;
     public DamageSourceRelativePosition RelativePosition;
 
-    public AttackSourceData(StateManager attacker, float damage, bool critical, DamageSourceType type, DamageSourceRelativePosition pos)
+    public AttackSourceData(StateManager attacker, float damage, bool critical, AttackDirection dir, DamageSourceType type, DamageSourceRelativePosition pos)
     {
         Attacker = attacker;
         Damage = damage;
         Critical = critical;
+        Direction = dir;
         AttackType = type;
         RelativePosition = pos;
     }

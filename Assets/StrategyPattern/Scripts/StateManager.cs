@@ -11,14 +11,17 @@ namespace SA
     public class StateManager : MonoBehaviour
     {
         public State currentState;
-        
+        [Header("Animation")]
         public Animator Animator;
         public AnimatorHook AnimatorHook;
-        public Combo ComboManager;
+        
+        [Header("Player Variables")]
         public PlayerVariables PlayerVariables;
         public GuardVariables GuardVariables;
         public VaultData VaultData;
         public SwordAttack Sword;
+        public Combo ComboManager;
+        public Transform Target;
         [HideInInspector] public float delta;
         [HideInInspector] public Transform mTransform;
         [HideInInspector] public Rigidbody Rigidbody;
@@ -33,6 +36,7 @@ namespace SA
         [HideInInspector] public CameraVariables CameraVariables;
         [HideInInspector] public GeneralInputVariables InputVariables;
 
+        [Header("State boolean")]
         public bool IsGrounded;
         public bool IsInCombat;
         public bool IsVaulting;
@@ -47,7 +51,6 @@ namespace SA
         public ComboAttack CurrentAttack { get; set; }
         public HealthManager HealthManager { get; private set; }
         public AttackSourceData AttackReceivedData { get; private set; }
-        public Transform Target;
 
         private void OnDrawGizmosSelected()
         {

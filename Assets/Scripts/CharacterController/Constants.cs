@@ -15,6 +15,13 @@ public enum DamageSourceRelativePosition
     Back
 }
 
+public enum AttackDirection
+{
+    Up,
+    Left,
+    Right
+}
+
 public static class Constants
 {
     public static float MovementThreshold = 0.1f;

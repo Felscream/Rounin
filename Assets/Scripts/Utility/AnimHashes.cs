@@ -47,6 +47,12 @@ namespace SA
         public readonly int LightRight = Animator.StringToHash("LightAttacks.LightRight");
         public readonly int LightUp = Animator.StringToHash("Combat.Attacks.LightUp");
 
+        public readonly int IsDamaged = Animator.StringToHash("IsDamaged");
+
+        public readonly int ReactionFront = Animator.StringToHash("DamageReaction.HitReaction_IdleFront");
+        public readonly int ReactionLeft = Animator.StringToHash("DamageReaction.HitReaction_IdleLeft");
+        public readonly int ReactionRight = Animator.StringToHash("DamageReaction.HitReaction_IdleRight");
+
         public readonly int ReactionLightFront = Animator.StringToHash("DamageReaction.HitReaction_LightFront");
         public readonly int ReactionLightLeft = Animator.StringToHash("DamageReaction.HitReaction_LightLeft");
         public readonly int ReactionLightRight = Animator.StringToHash("DamageReaction.HitReaction_LightRight");
