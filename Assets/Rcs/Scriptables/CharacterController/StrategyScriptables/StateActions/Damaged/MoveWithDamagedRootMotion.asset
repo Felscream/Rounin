@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FromLocomotion: 0
   LightFront: 50
-  LightRight: 1
-  LightLeft: 1
-  LightBack: 1
-  HeavyFront: 1
-  HeavyFrontLeft: 1
-  HeavyLeft: 1
-  HeavyFrontRight: 1
-  HeavyRight: 1
-  HeavyBack: 1
+  LightRight: 25
+  LightLeft: 40
+  LightBack: 20
+  HeavyFront: 20
+  HeavyFrontLeft: 20
+  HeavyLeft: 20
+  HeavyFrontRight: 30
+  HeavyRight: 30
+  HeavyBack: 20
