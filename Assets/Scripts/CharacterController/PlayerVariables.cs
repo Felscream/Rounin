@@ -27,7 +27,7 @@ public class GuardVariables
     public float GuardTimer = 0f;
     public float MoveGuardTimer = 0f;
     public bool ChangedGuard;
-    public ParryData ParryData;
+    public ParryData ParryData = new ParryData();
     
     public Vector2 LastGuardDirection;
     public GuardLocationData[] GuardData;
@@ -84,7 +84,7 @@ public class GuardVariables
     {
         if (GuardDirection.x == 1f)
             ParryDirection = AttackDirection.Right;
-        else if (GuardDirection.x == 1f)
+        else if (GuardDirection.x == -1f)
             ParryDirection = AttackDirection.Left;
         else if (GuardDirection.y == 1f)
             ParryDirection = AttackDirection.Up;

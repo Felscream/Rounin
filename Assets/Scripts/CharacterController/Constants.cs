@@ -27,10 +27,16 @@ namespace Guard
         Back
     }
 
-    public struct ParryData
+    public class ParryData
     {
         public bool HasParried;
         public ParryType Parry;
+
+        public ParryData()
+        {
+            HasParried = false;
+            Parry = ParryType.FrontUp;
+        }
 
         public ParryData(bool parried, ParryType type)
         {

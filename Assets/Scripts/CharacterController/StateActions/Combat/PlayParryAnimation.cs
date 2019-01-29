@@ -43,6 +43,7 @@ namespace SA
                     }
                     break;
             }
+            states.Animator.SetBool(states.Hashes.IsInteracting, true);
         }
     }
 }

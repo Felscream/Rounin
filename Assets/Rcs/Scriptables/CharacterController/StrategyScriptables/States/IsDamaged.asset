@@ -36,7 +36,3 @@ MonoBehaviour:
     condition: {fileID: 11400000, guid: d8197b83db5f3994199838a8125a9581, type: 2}
     targetState: {fileID: 11400000, guid: 1b4bb8b54d150794aa0472bb1d8b9140, type: 2}
     disable: 0
-  - id: 2
-    condition: {fileID: 11400000, guid: ce998e838d8922b4a92b944c24bb292e, type: 2}
-    targetState: {fileID: 11400000}
-    disable: 0
