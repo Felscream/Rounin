@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WaitForAnimationToEnd
   m_EditorClassIdentifier: Assembly-CSharp:SA:WaitForAnimationToEnd
   description: 
-  TargetBool: IsDamaged
+  TargetBool: IsInteracting

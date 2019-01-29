@@ -65,6 +65,12 @@ namespace SA
         public readonly int ReactionHeavyFrontRight = Animator.StringToHash("DamageReaction.HitReaction_HeavyFrontRight");
         public readonly int ReactionHeavyRight = Animator.StringToHash("DamageReaction.HitReaction_HeavyRight");
         public readonly int ReactionHeavyBack = Animator.StringToHash("DamageReaction.HitReaction_HeavyBack");
+
+        public readonly int ParryFrontUp = Animator.StringToHash("Parry.Parry_Up");
+        public readonly int ParryFrontLeft = Animator.StringToHash("Parry.Parry_FrontLeft");
+        public readonly int ParryFrontRight = Animator.StringToHash("Parry.Parry_FrontRight");
+        public readonly int ParryLeft = Animator.StringToHash("Parry.Parry_Left");
+        public readonly int ParryRight = Animator.StringToHash("Parry.Parry_Right");
     }
 }
 

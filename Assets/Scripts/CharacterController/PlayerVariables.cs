@@ -6,25 +6,6 @@ using Cinemachine;
 using SA;
 using Guard;
 
-namespace Guard
-{
-    public enum GuardLocation
-    {
-        none,
-        left,
-        right,
-        up
-    }
-
-[   System.Serializable]
-    public class GuardLocationData
-    {
-        public GuardLocation Location;
-        public Transform Target;
-    }
-}
-
-
 [System.Serializable]
 public class PlayerVariables 
 {
@@ -38,8 +19,6 @@ public class PlayerVariables
     public Collider SwordCollider;
     public Transform CombatDefaultTarget;
     public bool IsAttackingHeavy;
-
-    
 }
 
 [System.Serializable]
@@ -48,9 +27,22 @@ public class GuardVariables
     public float GuardTimer = 0f;
     public float MoveGuardTimer = 0f;
     public bool ChangedGuard;
-    public Vector2 GuardDirection;
+    public ParryData ParryData;
+    
     public Vector2 LastGuardDirection;
     public GuardLocationData[] GuardData;
+
+    private Vector2 _guardDirection;
+
+    public Vector2 GuardDirection
+    {
+        get { return _guardDirection; }
+        set {
+            _guardDirection = value;
+            UpdateParryDirection();
+        }
+    }
+    public AttackDirection ParryDirection { get; private set; }
 
     public GuardLocationData GetGuardLocation()
     {
@@ -86,6 +78,18 @@ public class GuardVariables
             location = GuardLocation.up;
         }
         return Array.Find(GuardData, x => x.Location == location);
+    }
+
+    public void UpdateParryDirection()
+    {
+        if (GuardDirection.x == 1f)
+            ParryDirection = AttackDirection.Right;
+        else if (GuardDirection.x == 1f)
+            ParryDirection = AttackDirection.Left;
+        else if (GuardDirection.y == 1f)
+            ParryDirection = AttackDirection.Up;
+        else
+            ParryDirection = AttackDirection.None;
     }
 
 }

@@ -42,12 +42,13 @@ namespace SA
         public bool IsVaulting;
         public bool IsDodging;
         public bool IsRunning;
-
+        
         public bool CanMoveForward { get; set; }
         public bool IsBetweenObstacles { get; set; }
         public bool AttackInitialized { get; set; }
         public bool WeaponEquipped { get; set; }
         public bool IsDamaged { get; set; }
+        public bool IsAttacking { get; set; }
         public ComboAttack CurrentAttack { get; set; }
         public HealthManager HealthManager { get; private set; }
         public AttackSourceData AttackReceivedData { get; private set; }
@@ -79,7 +80,6 @@ namespace SA
             mTransform = transform;
             Rigidbody = GetComponent<Rigidbody>();
             Collider = GetComponent<Collider>();
-            
 
             Hashes = new AnimHashes();
             AnimData = new AnimatorData(Animator);
@@ -112,6 +112,15 @@ namespace SA
         {
             ComboManager.OnGetNextAttack -= Sword.ClearDamagedList;
             HealthManager.OnHealthReduction -= OnHealthReduction;
+        }
+
+        public void ReceiveAttack(AttackSourceData attackData)
+        {
+            GuardVariables.ParryData = Referee.HasVictimParried(this, attackData.Attacker, attackData);
+            if (!GuardVariables.ParryData.HasParried)
+            {
+                HealthManager.ReduceHealth(attackData);
+            }
         }
 
         private void OnHealthReduction(AttackSourceData attackData)

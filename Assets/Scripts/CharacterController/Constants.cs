@@ -1,5 +1,45 @@
 ﻿using UnityEngine;
 
+namespace Guard
+{
+    public enum GuardLocation
+    {
+        none,
+        left,
+        right,
+        up
+    }
+
+    [System.Serializable]
+    public class GuardLocationData
+    {
+        public GuardLocation Location;
+        public Transform Target;
+    }
+
+    public enum ParryType
+    {
+        FrontUp,
+        FrontLeft,
+        FrontRight,
+        Left,
+        Right,
+        Back
+    }
+
+    public struct ParryData
+    {
+        public bool HasParried;
+        public ParryType Parry;
+
+        public ParryData(bool parried, ParryType type)
+        {
+            HasParried = parried;
+            Parry = type;
+        }
+    }
+}
+
 public enum DamageSourceType
 {
     Self,
@@ -19,7 +59,8 @@ public enum AttackDirection
 {
     Up,
     Left,
-    Right
+    Right,
+    None
 }
 
 public static class Constants

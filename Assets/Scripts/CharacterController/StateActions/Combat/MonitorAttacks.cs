@@ -9,21 +9,21 @@ namespace SA
     {
         public override void Execute(StateManager states)
         {
-            if(states.GuardVariables.GuardDirection != Vector2.zero && !states.Animator.GetBool(states.Hashes.IsInteracting))
+            states.IsAttacking = states.Animator.GetBool(states.Hashes.IsAttackingHeavy) || states.Animator.GetBool(states.Hashes.IsAttackingLight);
+            if (states.GuardVariables.GuardDirection != Vector2.zero && !states.Animator.GetBool(states.Hashes.IsInteracting))
             {
                 
                 if (states.InputVariables.RightTrigger > Constants.CombatThreshold && states.InputVariables.RightTriggerReleased)
                 {
-                    bool isAttacking = states.Animator.GetBool(states.Hashes.IsAttackingHeavy) || states.Animator.GetBool(states.Hashes.IsAttackingLight);
+                    
                     ComboAttack aa = new ComboAttack(states.GuardVariables.GuardDirection, true);
-                    states.ComboManager.AddToCombo(isAttacking, aa);
+                    states.ComboManager.AddToCombo(states.IsAttacking, aa);
                     states.InputVariables.RightTriggerReleased = false;
                 }
                 else if (states.InputVariables.RightShoulder)
                 {
-                    bool isAttacking = states.Animator.GetBool(states.Hashes.IsAttackingHeavy) || states.Animator.GetBool(states.Hashes.IsAttackingLight);
                     ComboAttack aa = new ComboAttack(states.GuardVariables.GuardDirection, false);
-                    states.ComboManager.AddToCombo(isAttacking, aa);
+                    states.ComboManager.AddToCombo(states.IsAttacking, aa);
                 }
             }
         }

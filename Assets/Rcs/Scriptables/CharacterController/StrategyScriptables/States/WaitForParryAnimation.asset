@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09f12a9b8fb5e44eb81fa499afbecc4, type: 3}
+  m_Name: WaitForParryAnimation
+  m_EditorClassIdentifier: 
+  onFixed:
+  - {fileID: 11400000, guid: ab59ba2958760944f93e616c5e4a59a9, type: 2}
+  onUpdate:
+  - {fileID: 11400000, guid: ab59ba2958760944f93e616c5e4a59a9, type: 2}
+  - {fileID: 11400000, guid: d252b40af6123ff489e73f9fb331a9fb, type: 2}
+  - {fileID: 11400000, guid: ba5ed5980f0073c4d9804763b92de196, type: 2}
+  - {fileID: 11400000, guid: f1f54939e4d159146bad863dd2c82cee, type: 2}
+  onEnter:
+  - {fileID: 11400000, guid: 156d173f993250f46859293abfe54c0f, type: 2}
+  onExit: []
+  idCount: 2
+  transitions:
+  - id: 0
+    condition: {fileID: 11400000, guid: 4972a56a4a4f6dc4789140b6521feb0a, type: 2}
+    targetState: {fileID: 11400000, guid: 1b4bb8b54d150794aa0472bb1d8b9140, type: 2}
+    disable: 0
+  - id: 1
+    condition: {fileID: 11400000, guid: ce998e838d8922b4a92b944c24bb292e, type: 2}
+    targetState: {fileID: 11400000, guid: 088f92ddd094e584ea26790f4aa140f6, type: 2}
+    disable: 0

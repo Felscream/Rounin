@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SA;
 
+[RequireComponent(typeof(Collider))]
 public class SwordAttackData
 {
     public Vector2 Direction;
@@ -30,10 +31,15 @@ public class SwordAttack : MonoBehaviour
     public SwordAttackData AttackData = new SwordAttackData();
 
     private List<StateManager> DamagedList;
+    private Collider _swordCollider;
+
+    public bool CanBeEnabled { get; set; }
 
     private void Start()
     {
         DamagedList = new List<StateManager>();
+        _swordCollider = GetComponent<Collider>();
+        InitSwordCollider();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -42,7 +48,7 @@ public class SwordAttack : MonoBehaviour
         
         if(victim != null && !HasAlreadyBeenDamaged(victim) && victim != Origin)
         {
-            victim.HealthManager.ReduceHealth(BuildAttackData(victim.mTransform));
+            victim.ReceiveAttack(BuildAttackData(victim.mTransform));
             DamagedList.Add(victim);
         }
     }
@@ -59,6 +65,24 @@ public class SwordAttack : MonoBehaviour
         DamagedList.Clear();
     }
 
+    public void DisableSwordCollider()
+    {
+        _swordCollider.enabled = false;
+    }
+
+    public void EnableSwordCollider()
+    {
+        if(CanBeEnabled)
+            _swordCollider.enabled = true;
+    }
+
+    public void SetSwordColliderActivation(bool value)
+    {
+        CanBeEnabled = value;
+        if (!value)
+            DisableSwordCollider();
+    }
+
     private bool HasAlreadyBeenDamaged(StateManager sm)
     {
         for(int i = 0; i < DamagedList.Count; ++i)
@@ -73,7 +97,7 @@ public class SwordAttack : MonoBehaviour
 
     private AttackSourceData BuildAttackData(Transform victimTransform)
     {
-        DamageSourceRelativePosition pos = DamagedHandler.GetAttackerRelative2DPosition(Origin.mTransform, victimTransform);
+        DamageSourceRelativePosition pos = Referee.GetAttackerRelative2DPosition(Origin.mTransform, victimTransform);
         AttackDirection dir = AttackDirection.Up;
         if(AttackData.Direction.x == 1f)
         {
@@ -85,5 +109,11 @@ public class SwordAttack : MonoBehaviour
         }
 
         return new AttackSourceData(Origin, AttackData.Damage, AttackData.IsHeavy, dir, DamageSourceType.Sword, pos);
+    }
+
+    private void InitSwordCollider()
+    {
+        _swordCollider.isTrigger = true;
+        _swordCollider.enabled = false;
     }
 }
