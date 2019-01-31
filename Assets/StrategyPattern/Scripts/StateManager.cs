@@ -11,6 +11,7 @@ namespace SA
     public class StateManager : MonoBehaviour
     {
         public State currentState;
+        public Transition DeathTransition;
         [Header("Animation")]
         public Animator Animator;
         public AnimatorHook AnimatorHook;
@@ -21,6 +22,7 @@ namespace SA
         public VaultData VaultData;
         public SwordAttack Sword;
         public Combo ComboManager;
+        public RagdollActivator RagdollController;
         public Transform Target;
         [HideInInspector] public float delta;
         [HideInInspector] public Transform mTransform;
@@ -42,7 +44,8 @@ namespace SA
         public bool IsVaulting;
         public bool IsDodging;
         public bool IsRunning;
-        
+
+        public bool IsDead { get; set; }
         public bool CanMoveForward { get; set; }
         public bool IsBetweenObstacles { get; set; }
         public bool AttackInitialized { get; set; }
@@ -106,6 +109,8 @@ namespace SA
             {
                 currentState.Tick(this);
             }
+
+            CheckDeathTransition();
         }
 
         private void OnDisable()
@@ -126,7 +131,23 @@ namespace SA
         private void OnHealthReduction(AttackSourceData attackData)
         {
             AttackReceivedData = attackData;
-            IsDamaged = true;
+            if (HealthManager.BaseHealth > 0f)
+            {
+                IsDamaged = true;
+            }
+        }
+
+        private void CheckDeathTransition()
+        {
+            if (DeathTransition.targetState != null && DeathTransition.condition != null && currentState != DeathTransition.targetState)
+            {
+                if (DeathTransition.condition.CheckCondition(this))
+                {
+                    currentState.OnExit(this);
+                    currentState = DeathTransition.targetState;
+                    currentState.OnEnter(this);
+                }
+            }
         }
     }
 }
