@@ -13,8 +13,7 @@ namespace SA
         public bool ADown;
         public bool A;
         public bool RightShoulder;
-        
-        
+        public bool XDown;
     }
 }
 

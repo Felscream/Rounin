@@ -11,7 +11,7 @@ namespace SA
         public readonly int IdleRand = Animator.StringToHash("IdleRand");
         public readonly int MoveX = Animator.StringToHash("MoveX");
         public readonly int MoveY = Animator.StringToHash("MoveY");
-        public readonly int JumpForward = Animator.StringToHash("JumpForward");
+        public readonly int IsJumping = Animator.StringToHash("IsJumping");
         public readonly int IsGrounded = Animator.StringToHash("IsGrounded");
         public readonly int VerticalVelocity = Animator.StringToHash("VerticalVelocity");
         public readonly int LandLowVelocity = Animator.StringToHash("FallLandLowVelocity");

@@ -18,6 +18,8 @@ public class PlayerVariables
     [HideInInspector] public float IdleTimer = 0f;
     public Collider SwordCollider;
     public Transform CombatDefaultTarget;
+    public Collider HurtBox;
+    public Collider PlayerCollision;
     public bool IsAttackingHeavy;
 }
 

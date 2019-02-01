@@ -29,6 +29,7 @@ namespace SA
         [HideInInspector] public Rigidbody Rigidbody;
         [HideInInspector] public Collider Collider;
         [HideInInspector] public float TimeSinceFall;
+        [HideInInspector] public float TimeSinceJump;
 
         public AnimHashes Hashes;
         public AnimatorData AnimData;
@@ -46,12 +47,14 @@ namespace SA
         public bool IsRunning;
 
         public bool IsDead { get; set; }
+        public bool IsJumping { get; set; }
         public bool CanMoveForward { get; set; }
         public bool IsBetweenObstacles { get; set; }
         public bool AttackInitialized { get; set; }
         public bool WeaponEquipped { get; set; }
         public bool IsDamaged { get; set; }
         public bool IsAttacking { get; set; }
+        public bool IsImmune { get; set; }
         public ComboAttack CurrentAttack { get; set; }
         public HealthManager HealthManager { get; private set; }
         public AttackSourceData AttackReceivedData { get; private set; }
@@ -121,6 +124,9 @@ namespace SA
 
         public void ReceiveAttack(AttackSourceData attackData)
         {
+            if (IsImmune)
+                return;
+
             GuardVariables.ParryData = Referee.HasVictimParried(this, attackData.Attacker, attackData);
             if (!GuardVariables.ParryData.HasParried)
             {

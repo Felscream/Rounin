@@ -26,9 +26,6 @@ namespace SA
                         {
                             state.Animator.SetBool(state.Hashes.IsInteracting, true);
                             state.Animator.CrossFade(state.Hashes.FallAndRoll, 0.1f);
-                            /*Vector3 tarForce = state.mTransform.forward * RollForce;
-                            tarForce.y = 0f;
-                            state.Rigidbody.AddForce(tarForce, ForceMode.VelocityChange);*/
 
                         }
                         else

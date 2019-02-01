@@ -58,12 +58,9 @@ public class PlayerInput : ScriptableObject
 
         PlayerStates.Value.InputVariables.ADown = Controller.GetButtonDown(InputConstants.A);
         PlayerStates.Value.InputVariables.A = Controller.GetButton(InputConstants.A);
+        PlayerStates.Value.InputVariables.RightShoulder = Controller.GetButtonDown(InputConstants.RB);
 
-        
-            PlayerStates.Value.InputVariables.RightShoulder = Controller.GetButtonDown(InputConstants.RB);
-        
-
-
+        PlayerStates.Value.InputVariables.XDown = Controller.GetButtonDown(InputConstants.X);
     }
 }
 

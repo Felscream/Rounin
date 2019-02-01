@@ -60,6 +60,8 @@ namespace SA
 
         private bool TargetIsInLineOfSight(StateManager s, Transform t)
         {
+            if (t == null)
+                return false;
             Vector3 dir = (s.PlayerVariables.CameraTransform.position - t.position).normalized;
             float angle = Vector3.Dot(s.PlayerVariables.CameraTransform.forward, dir);
             if (angle < FocusAngleRange && !AreObstaclesOnTheWay(s, t))
