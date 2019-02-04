@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MinJumpTime
   m_EditorClassIdentifier: 
   GroundedDistance: 1.4
-  InAirDistance: 0.71
+  InAirDistance: 0.7
   MinAirTime: 0.35

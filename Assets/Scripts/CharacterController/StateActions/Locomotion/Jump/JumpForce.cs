@@ -12,7 +12,7 @@ namespace SA
         public override void Execute(StateManager states)
         {
             Vector3 tarVelocity = states.Rigidbody.velocity;
-            tarVelocity += Vector3.up * UpForce /*+ states.mTransform.forward * MinForwardForce*/;
+            tarVelocity += Vector3.up * UpForce;
             states.Rigidbody.drag = 0f;
             states.Rigidbody.AddForce(tarVelocity, ForceMode.VelocityChange);
         }
