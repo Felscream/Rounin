@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2413384815accc8479fe4be9a11e9c13, type: 3}
-  m_Name: JumpForce
+  m_Script: {fileID: 11500000, guid: 857f9a8ff157d3344ad4893191faa99b, type: 3}
+  m_Name: AirControl
   m_EditorClassIdentifier: 
-  UpForce: 6
+  AirControlPercentage: 0.2

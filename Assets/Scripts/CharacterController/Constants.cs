@@ -83,4 +83,6 @@ public static class Constants
     public static float HeavyBaseDamage = 300f;
     public static float LightBaseDamage = 100f;
     public static float HeavyUpBaseDamage = 400f;
+    public static float MaxAirXZMagnitude = 3.25f;
+    public static float MaxAirControlMagnitude = 1f;
 }

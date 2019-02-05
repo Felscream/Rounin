@@ -7,7 +7,6 @@ namespace SA
     [CreateAssetMenu(menuName = "Actions/State Actions/Jump/JumpForce")]
     public class JumpForce : StateActions
     {
-        public float MinForwardForce = 6f;
         public float UpForce = 10f;
         public override void Execute(StateManager states)
         {
